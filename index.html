@@ -146,14 +146,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
 .prose.en h2{font-size:22px;font-weight:600;line-height:1.35;margin:60px 0 20px;letter-spacing:-.2px}
 .prose.en h3{font-size:17px;font-weight:600;line-height:1.4;margin:40px 0 12px}
 .prose.en b{font-weight:600}
-.prose .fig{margin:48px -60px}
-.prose .fig img{width:100%;height:420px;object-fit:cover;display:block}
-.prose .fig.tall img{height:540px}
+.prose .fig{margin:48px 0}
+.prose .fig img{width:100%;height:auto;aspect-ratio:5/2;object-fit:cover;display:block}
+.prose .fig.tall img{aspect-ratio:16/9}
 .prose .poster{margin:48px auto;max-width:520px}
 .prose .poster img{width:100%;height:auto;display:block}
 .prose figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:12px;max-width:520px}
-.prose .fig figcaption{padding-left:60px}
-@media(max-width:820px){.prose .fig{margin:40px 0}.prose .fig img{height:260px}.prose .fig figcaption{padding-left:0}}
+@media(max-width:820px){.prose .fig{margin:40px 0}.prose .fig img{aspect-ratio:16/10}}
 .prose ul.bul{list-style:none;margin:0 0 24px;border-top:1px solid var(--line)}
 .prose ul.bul li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:16px;line-height:1.75}
 .prose ul.bul li::before{content:"";position:absolute;left:2px;top:23px;width:6px;height:1px;background:var(--ink)}
@@ -177,6 +176,105 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
 .next span{display:block;font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:8px}
 .next b{font-size:20px;font-weight:500;line-height:1.4}
 .next:hover b{text-decoration:underline;text-underline-offset:4px}
+
+.prose h3{font-size:17px;font-weight:500;line-height:1.6;margin:40px 0 14px}
+.prose .recipe{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 0;margin:28px 0}
+.prose .recipe ul{list-style:none;display:flex;gap:32px;flex-wrap:wrap;font-size:16px}
+.prose .tbl.c3 tbody th{width:26%}
+.prose .tbl.c3 td:nth-child(2){width:32%;padding-right:16px}
+
+/* ===== WeChat article ===== */
+:root{--wx:#0A5C36;--wx-soft:#EEF4F0;--wx-ink:#333}
+.wx-stage{background:#F4F4F2;padding:56px 20px 40px;margin-top:0}
+.phone{width:390px;margin:0 auto;background:#fff;border-radius:44px;border:10px solid #111;box-shadow:0 30px 60px -30px rgba(0,0,0,.35);overflow:clip;position:relative}
+.wx-top{position:sticky;top:0;z-index:2;background:#fff;border-bottom:1px solid #EDEDED}
+.wx-top .sb{display:flex;justify-content:space-between;align-items:center;padding:12px 26px 4px;font-size:14px;font-weight:600;color:#111}
+.wx-top .sbi{display:flex;align-items:flex-end;gap:2px}
+.wx-top .sbi i{display:block;width:3px;background:#111;}
+.wx-top .sbi i:nth-child(1){height:5px}.wx-top .sbi i:nth-child(2){height:8px}.wx-top .sbi i:nth-child(3){height:11px}
+.wx-top .sbi b{display:block;width:22px;height:11px;border:1.5px solid #111;margin-left:6px;position:relative}
+.wx-top .sbi b::after{content:"";position:absolute;inset:1.5px;right:5px;background:#111;}
+.wx-top .nav{display:flex;justify-content:space-between;align-items:center;height:40px;padding:0 16px}
+.wx-top .back{width:10px;height:10px;border-left:2px solid #111;border-bottom:2px solid #111;transform:rotate(45deg);margin-left:6px}
+.wx-top .dots{font-size:20px;letter-spacing:1px;color:#111;line-height:1}
+.wx{padding:22px 20px 28px;color:var(--wx-ink);font-size:16px;line-height:1.8;letter-spacing:.5px;text-align:justify}
+.wx h1{font-size:22px;font-weight:600;line-height:1.45;color:#111;letter-spacing:0;text-align:left;margin-bottom:14px}
+.wx-meta{display:flex;align-items:center;gap:8px;font-size:15px;margin-bottom:22px}
+.wx-meta .orig{font-size:11px;color:#999;background:#F2F2F2;padding:1px 5px;letter-spacing:0}
+.wx-meta .acc{color:#576B95}
+.wx p{margin:0 0 1.15em}
+.wx b{color:var(--wx);font-weight:600}
+.wx h2{margin:2.4em 0 1.1em;padding:10px 14px;background:var(--wx);font-size:17px;font-weight:600;line-height:1.55;color:#fff;letter-spacing:.3px;text-align:left}
+.wx h3{margin:1.8em 0 .8em;font-size:16px;font-weight:600;color:var(--wx);text-align:left;display:flex;gap:8px;align-items:baseline}
+.wx .q{background:#F7F7F7;padding:12px 16px;color:#555;font-size:15px}
+.wx .key{border:1px solid var(--wx);padding:14px 16px;background:#fff;color:#073D24;font-size:15px;position:relative;margin-top:1.6em}
+.wx .key::before{content:"重点";position:absolute;top:-10px;left:14px;background:var(--wx);color:#fff;font-size:11px;padding:0 8px;line-height:20px;letter-spacing:1px}
+.wx dl{margin:0 0 1.2em;overflow:hidden;border:2px solid var(--wx)}
+.wx dl div{padding:12px 14px;border-bottom:2px solid var(--wx)}
+.wx dl div:last-child{border-bottom:0}
+.wx dt{font-weight:600;color:var(--wx);font-size:15px}
+.wx dd{font-size:15px;line-height:1.75}
+.wx ol{list-style:none;counter-reset:n;margin:0 0 1.2em}
+.wx ol li{counter-increment:n;display:grid;grid-template-columns:30px 1fr;align-items:start;padding:6px 0}
+.wx ol li::before{content:counter(n);width:22px;height:22px;background:var(--wx);color:#fff;font-size:12px;display:grid;place-items:center;margin-top:3px;border-radius:50%}
+.wx hr{border:0;text-align:center;margin:2em 0;height:auto}
+.wx hr::after{content:"· · ·";color:var(--wx);letter-spacing:4px}
+.wx .tbl{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;margin:0 0 1.4em;letter-spacing:0;text-align:left;border:2px solid var(--wx)}
+.wx .tbl thead th{background:var(--wx);color:#fff;font-weight:500;padding:8px;text-align:left;border:2px solid var(--wx)}
+.wx .tbl tbody th{font-weight:600;color:#073D24;padding:8px;vertical-align:top;width:30%;border:2px solid var(--wx)}
+.wx .tbl td{padding:8px;border:2px solid var(--wx);vertical-align:top;color:#444}
+.wx .recipe{background:#fff;border:2px solid var(--wx);padding:14px 16px;margin:0 0 1.2em}
+.wx .recipe .lbl{font-weight:600;color:var(--wx);margin-bottom:6px}
+.wx .recipe ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px}
+.wx .recipe li::before{content:"·";color:var(--wx);margin-right:6px}
+.wx .src{margin-top:2.4em;padding-top:1em;border-top:1px solid #EDEDED;font-size:12px;line-height:1.7;color:#999;letter-spacing:0;text-align:left}
+.wx .src .lbl{font-size:13px;color:#666;font-weight:600;margin-bottom:6px}
+.wx .src ul{list-style:none}.wx .src li{margin-bottom:6px;word-break:break-all}
+.wx .src a{color:#576B95}
+.wx-fig{position:relative;aspect-ratio:16/9;background:#ECECEA;margin:0 0 1.3em}
+.wx-fig::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-size:12px;color:#AAA;letter-spacing:1px}
+.wx-fig.cover{aspect-ratio:2.35/1;margin-bottom:1.6em}
+.wx-end{display:flex;justify-content:space-around;border-top:1px solid #EDEDED;margin-top:2em;padding-top:14px;font-size:13px;color:#888;letter-spacing:0}
+.wx-after{max-width:390px;margin:40px auto 0}
+@media(max-width:520px){.wx-stage{padding:0;background:#fff}.phone{width:auto;border:0;border-radius:0;box-shadow:none}.wx-after{padding:0 20px}}
+
+/* ===== two-column CN article ===== */
+.duo{display:grid;grid-template-columns:410px minmax(0,640px);justify-content:center;gap:72px;padding:24px 0 40px}
+.duo-l{position:sticky;top:20px;align-self:start}
+.duo-cap{font-size:11px;letter-spacing:2px;color:var(--muted);text-align:center;margin-bottom:12px}
+.duo .phone{width:390px;height:min(820px,calc(100vh - 80px));overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+.duo .phone::-webkit-scrollbar{display:none}
+.duo-r{padding-top:30px}
+.a-title{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:40px}
+.a-title .k{font-size:11px;letter-spacing:3px;color:var(--ink2)}
+.a-title h1{font-size:32px;font-weight:500;line-height:1.4;margin:14px 0 16px;letter-spacing:.5px}
+.a-title .by{font-size:12px;color:var(--ink2)}
+.pfig{position:relative;aspect-ratio:16/9;background:#E6E6E4;margin:0 0 32px}
+.pfig::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-size:11px;letter-spacing:2px;color:#A9A9A6}
+.pfig.cover{margin-bottom:40px}
+@media(max-width:1180px){.duo{grid-template-columns:minmax(0,640px);gap:0}.duo-l{display:none}.duo-r{padding-top:0}}
+
+.wx-wide{padding:8px 0 0;font-size:17px;line-height:1.9}
+.wx-wide h1{font-size:28px;line-height:1.45;margin-bottom:16px}
+.wx-wide .wx-meta{margin-bottom:28px}
+.wx-wide h2{font-size:19px;padding:12px 18px}
+.wx-wide h3{font-size:17px}
+.wx-wide .q,.wx-wide .key,.wx-wide dd,.wx-wide dt{font-size:16px}
+.wx-wide .tbl{font-size:14px}
+.wx-wide .src{font-size:13px}
+.wx-wide .wx-end{display:none}
+.wx .rrow{display:flex;align-items:center;justify-content:space-around;gap:6px;padding:6px 0 2px}
+.wx .ri{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--wx);flex:1}
+.wx .ri svg{width:40px;height:46px}
+.wx .ri span{color:var(--wx-ink);font-size:14px;letter-spacing:0;white-space:nowrap}
+.wx .rrow .plus{color:var(--wx);font-size:20px;font-weight:600;transform:translateY(-12px)}
+.wx-wide .ri svg{width:54px;height:62px}.wx-wide .ri span{font-size:16px}
+.wx-fig img,.pfig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.wx-fig:has(img)::after,.pfig:has(img)::after{display:none}
+.wx-fig:has(img),.pfig:has(img){background:#fff}
+.tbd{font-size:13px;color:var(--ink2);padding-left:22%}
+@media(max-width:700px){.tbd{padding-left:0}}
+footer a{color:inherit}
 .todo{color:var(--muted);border-bottom:1px dashed var(--muted)}
 </style>
 </head>
@@ -190,8 +288,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <a href="#sec-public">大众科普</a>
     <a href="#sec-ppt">PPT</a>
     <a href="#sec-da">DA</a>
-    <a href="#about" data-nav="about">关于</a>
-    <a class="boxbtn" href="#about">下载简历</a>
+    <a class="boxbtn" href="resume.pdf" target="_blank" rel="noopener">下载简历</a>
   </nav>
 </div>
 
@@ -206,7 +303,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
 <main class="view" data-view="home">
 
   <a class="hero" href="#fatty-liver">
-    <div class="ph" data-label="封面图"></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?w=1600&q=80&auto=format&fit=crop" alt="医生在病历上书写"></div>
+    <div class="shade"></div>
     <div class="cap">
       <div class="k">大众科普</div>
       <h1>体检查出脂肪肝，该怎么办？</h1>
@@ -215,132 +313,385 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
   </a>
 
   <section class="sec" id="sec-papers">
-    <div class="sec-h"><h2>文献科普</h2><div class="r"><span>No.001–006</span><a href="https://www.emotag.se/blog" target="_blank" rel="noopener">Emotag 博客</a></div></div>
+    <div class="sec-h"><h2>文献科普</h2><div class="r"><span>No.001–006</span></div></div>
     <div class="g4col">
-      <a class="it" href="#do-anxious-owners-have-anxious-dogs"><div class="ph"><img src="images/dog-on-sofa.jpg" alt="A dog resting on a sofa in a living room, watching something out of frame" loading="lazy"></div><div class="d">25 August 2026<i>|</i>文献科普</div><h3>Do Anxious Owners Have Anxious Dogs?</h3><p>In 58 Swedish dog-owner pairs, owners with higher long-term hair cortisol tended to have dogs with higher hair cortisol. It is an association, not a proven cause.</p></a>
-      <a class="it" href="#how-to-build-confidence-in-a-sensitive-dog"><div class="ph"><img src="images/dog-waiting-alone.jpg" alt="A dog lying alone on a floor indoors, head down, looking out across the room" loading="lazy"></div><div class="d">25 August 2026<i>|</i>文献科普</div><h3>How Do You Build Confidence in a Sensitive or Timid Dog?</h3><p>A timid dog does not become braver by being exhausted, ignored or forced to face its fears. Ten principles, from reading the early signals to managed exposure.</p></a>
-      <a class="it" href="#do-dogs-really-enjoy-training"><div class="ph"><img src="images/owner-at-home.png" alt="A person sitting on a sofa at home with a small dog beside them" loading="lazy"></div><div class="d">25 August 2026<i>|</i>文献科普</div><h3>Do Dogs Really Enjoy Training?</h3><p>Many dogs can enjoy training when it is predictable, voluntary and reward-based. Obeying is not the same as enjoying, and six popular training rules need a correction.</p></a>
-      <a class="it" href="#what-kind-of-strangers-do-dogs-prefer"><div class="ph"><img src="images/lab-walking.jpg" alt="A yellow Labrador walking along a pavement beside a person’s legs" loading="lazy"></div><div class="d">25 August 2026<i>|</i>文献科普</div><h3>What Kind of Strangers Do Dogs Prefer?</h3><p>In a study of 32 pet dogs, dogs stayed closer to an unfamiliar person and matched that person’s movement after watching them walk and talk with their owner.</p></a>
-      <a class="it" href="#do-male-and-female-dogs-bond-differently"><div class="ph"><img src="images/labrador-portrait.jpg" alt="Head-and-shoulders portrait of a black Labrador Retriever against a dark background" loading="lazy"></div><div class="d">25 August 2026<i>|</i>文献科普</div><h3>Do Male and Female Dogs Bond Differently With Their Owners?</h3><p>A study of 51 Labrador Retrievers found that male and female dogs expressed attachment differently in some situations. It does not mean females love their owners more.</p></a>
-      <a class="it" href="#can-dogs-learn-toy-names-by-overhearing"><div class="ph"><img src="images/dog-listening.jpg" alt="A golden retriever lying down with its head on the floor, looking up and to the side" loading="lazy"></div><div class="d">18 August 2026<i>|</i>文献科普</div><h3>Can Dogs Learn Toy Names Just by Listening to Us Talk?</h3><p>Some dogs can. In a 2026 Science study, ten Gifted Word Learner dogs learned new toy names by overhearing two people talk. Typical family dogs did not.</p></a>
+      <a class="it" href="#do-anxious-owners-have-anxious-dogs"><div class="ph"><img src="images/dog-on-sofa.jpg" alt="A dog resting on a sofa in a living room, watching something out of frame" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>Do Anxious Owners Have Anxious Dogs?</h3><p>In 58 Swedish dog-owner pairs, owners with higher long-term hair cortisol tended to have dogs with higher hair cortisol. It is an association, not a proven cause.</p></a>
+      <a class="it" href="#how-to-build-confidence-in-a-sensitive-dog"><div class="ph"><img src="images/dog-waiting-alone.jpg" alt="A dog lying alone on a floor indoors, head down, looking out across the room" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>How Do You Build Confidence in a Sensitive or Timid Dog?</h3><p>A timid dog does not become braver by being exhausted, ignored or forced to face its fears. Ten principles, from reading the early signals to managed exposure.</p></a>
+      <a class="it" href="#do-dogs-really-enjoy-training"><div class="ph"><img src="images/owner-at-home.png" alt="A person sitting on a sofa at home with a small dog beside them" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>Do Dogs Really Enjoy Training?</h3><p>Many dogs can enjoy training when it is predictable, voluntary and reward-based. Obeying is not the same as enjoying, and six popular training rules need a correction.</p></a>
+      <a class="it" href="#what-kind-of-strangers-do-dogs-prefer"><div class="ph"><img src="images/lab-walking.jpg" alt="A yellow Labrador walking along a pavement beside a person’s legs" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>What Kind of Strangers Do Dogs Prefer?</h3><p>In a study of 32 pet dogs, dogs stayed closer to an unfamiliar person and matched that person’s movement after watching them walk and talk with their owner.</p></a>
+      <a class="it" href="#do-male-and-female-dogs-bond-differently"><div class="ph"><img src="images/labrador-portrait.jpg" alt="Head-and-shoulders portrait of a black Labrador Retriever against a dark background" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>Do Male and Female Dogs Bond Differently With Their Owners?</h3><p>A study of 51 Labrador Retrievers found that male and female dogs expressed attachment differently in some situations. It does not mean females love their owners more.</p></a>
+      <a class="it" href="#can-dogs-learn-toy-names-by-overhearing"><div class="ph"><img src="images/dog-listening.jpg" alt="A golden retriever lying down with its head on the floor, looking up and to the side" loading="lazy"></div><div class="d">英文<i>|</i>文献科普</div><h3>Can Dogs Learn Toy Names Just by Listening to Us Talk?</h3><p>Some dogs can. In a 2026 Science study, ten Gifted Word Learner dogs learned new toy names by overhearing two people talk. Typical family dogs did not.</p></a>
     </div>
   </section>
 
   <section class="sec" id="sec-public">
-    <div class="sec-h"><h2>大众科普</h2><div class="r"><span>No.001</span></div></div>
-    <a class="feat" href="#fatty-liver">
-      <h3>体检查出脂肪肝，该怎么办？</h3>
-      <p>体检报告下来了，翻到腹部B超那一页，结论里多了一行“轻度脂肪肝”——这是什么？严重吗？我会有事吗？</p>
-      <div class="ph g3" data-label="封面图"></div>
-    </a>
+    <div class="sec-h"><h2>大众科普</h2><div class="r"><span>No.001–002</span></div></div>
+    <div class="g4col">
+      <a class="it" href="#fatty-liver"><div class="ph"><img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?w=1600&q=80&auto=format&fit=crop" alt="医生在病历上书写" loading="lazy"></div><div class="d">中文<i>|</i>大众科普</div><h3>体检查出脂肪肝，该怎么办？</h3><p>体检报告下来了，翻到腹部B超那一页，结论里多了一行“轻度脂肪肝”——这是什么？严重吗？我会有事吗？</p></a>
+      <a class="it" href="#norovirus"><div class="ph"><img src="https://images.unsplash.com/photo-1604830926588-b51d5ddeba7b?w=1600&q=80&auto=format&fit=crop" alt="蜷在沙发上休息的人" loading="lazy"></div><div class="d">中文<i>|</i>大众科普</div><h3>突然上吐下泻，还发烧？别慌，可能是诺如病毒胃肠炎</h3><p>秋冬时节，之前还好好的，这几天突然开始恶心、呕吐，频繁跑厕所，到最后拉出来的几乎都是水。浑身没劲，一量体温，竟然还发烧了。</p></a>
+    </div>
   </section>
 
   <section class="sec" id="sec-ppt">
-    <div class="sec-h"><h2>PPT</h2><div class="r"><span>整理中</span></div></div>
-    <div class="g4col">
-      <div class="it soon"><div class="ph g1"></div><div class="d">PPT</div></div>
-      <div class="it soon"><div class="ph g2"></div><div class="d">PPT</div></div>
-      <div class="it soon"><div class="ph g1"></div><div class="d">PPT</div></div>
-      <div class="it soon"><div class="ph g2"></div><div class="d">PPT</div></div>
-    </div>
+    <div class="sec-h"><h2>PPT</h2><div class="r"><span>待更新</span></div></div>
+    <p class="tbd">作品整理中，待更新。</p>
   </section>
 
   <section class="sec" id="sec-da">
-    <div class="sec-h"><h2>DA</h2><div class="r"><span>整理中</span></div></div>
-    <div class="g4col">
-      <div class="it soon"><div class="ph g2"></div><div class="d">Detail Aid</div></div>
-      <div class="it soon"><div class="ph g1"></div><div class="d">Detail Aid</div></div>
-      <div class="it soon"><div class="ph g2"></div><div class="d">Detail Aid</div></div>
-      <div class="it soon"><div class="ph g1"></div><div class="d">Detail Aid</div></div>
-    </div>
+    <div class="sec-h"><h2>DA</h2><div class="r"><span>待更新</span></div></div>
+    <p class="tbd">作品整理中，待更新。</p>
   </section>
 
-  <section class="sec">
-    <div class="sec-h"><h2>关于</h2><div class="r"><a href="#about">阅读</a></div></div>
-    <div class="ab"><div></div><div class="t"><b>林怡馨 Yixin Lin</b><br>沈阳药科大学 药物分析 学士<br>隆德大学 药物技术 硕士</div></div>
-  </section>
 
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ ARTICLE ============ -->
 <main class="view" data-view="fatty-liver">
-  <div class="hero">
-    <div class="ph" data-label="文章头图"></div>
-    <div class="cap">
-      <div class="k">大众科普</div>
-      <h1>体检查出脂肪肝，该怎么办？</h1>
-      <div class="by">林怡馨 · 约 8 分钟</div>
+  <div class="duo">
+    <aside class="duo-l">
+      <p class="duo-cap">公众号预览</p>
+      <div class="phone">
+        <div class="wx-top">
+          <div class="sb"><span>9:41</span><span class="sbi"><i></i><i></i><i></i><b></b></span></div>
+          <div class="nav"><span class="back" aria-hidden="true"></span><span class="dots" aria-hidden="true">···</span></div>
+        </div>
+        <article class="wx">
+        <h1>体检查出脂肪肝，该怎么办？</h1>
+        <div class="wx-meta"><span class="orig">原创</span><span class="acc">林怡馨</span></div>
+        <div class="wx-fig cover" data-label="封面图"><img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?w=1600&q=80&auto=format&fit=crop" alt="医生在病历上书写" loading="lazy"></div>
+<p>体检报告下来了，翻到腹部B超那一页，结论里多了一行“轻度脂肪肝”——这是什么？严重吗？我会有事吗？</p>
+<p>其他报告一堆专业术语，你根本就看不懂，回想最近以来的吃饭、睡觉，都很正常，也没觉得哪里不舒服——所以，这个到底是什么？是你平时注意饮食就可以，还是要吃药，或者必须约门诊？</p>
+<p class="key">如果你是第一次查出轻度脂肪肝，平时也没有不舒服，可以先约一次普通门诊，带上完整的体检报告，让医生做个初步评估。 等门诊的时候，可以先从少喝甜饮料、多走路这类小事做起。要不要吃药、多久复查，等医生了解你的情况后再定。</p>
+<h2>一、脂肪肝是什么？肝里怎么会有脂肪？</h2>
+<div class="wx-fig" data-label="配图 1"><img src="images/fl-sources.jpg" alt="肝脏脂肪的三个来源：食物、身体储存的脂肪、碳水和含糖饮料" loading="lazy"></div>
+<p>脂肪肝，顾名思义，就是肝脏里的细胞存了太多脂肪。</p>
+<p>正常肝细胞内本来就有少量脂肪，主要参与日常代谢。但当脂肪在肝细胞里积得过多，肝脏在B超图像上的样子就会发生变化。体检报告上的“脂肪肝”，说的就是医生在B超上看到了脂肪积存的迹象。</p>
+<p class="q">有的人可能会问：“我平时也没怎么吃肥肉啊，怎么会有脂肪肝呢？”</p>
+<p>实际上，肝脏里的脂肪主要有三个来源：</p>
+<p><b>第一，食物。</b> 肥肉、炒菜用的油、蛋糕使用的奶油都含有脂肪。食物里的脂肪被消化吸收后，其中一部分会随血液到达肝脏。</p>
+<p><b>第二，身体原先存下的脂肪。</b> 两顿饭之间，身体需要能量，会从脂肪组织里释放脂肪到血液中，一些会被送到肝脏。而饭后，身体会分泌一种叫胰岛素的激素，用于给脂肪组织发出“少释放脂肪”的信号。</p>
+<p>就像同样一口辣椒，有人觉得很辣，有人觉得还好，每个人的脂肪组织对胰岛素信号反应也有强弱，有的人反应相对较弱，释放到血液里的脂肪就可能相对增多，而流到肝脏的也可能随之增多。</p>
+<p><b>第三，肝脏自己合成。</b> 米饭、面条等碳水里的淀粉消化后，会分解成葡萄糖供身体使用。肝脏也可以用一部分糖来合成脂肪，比如，如果你经常在三餐以外，或者三餐中喝含糖饮料，那么长期摄入的能量也许会超过身体所消耗的量，而肝脏，也就也许合成更多脂肪。</p>
+<h2>二、报告写了“轻度”，我的肝到底怎么样？</h2>
+<div class="wx-fig" data-label="配图 2"><img src="images/fl-fibrosis.jpg" alt="从健康肝脏到脂肪积存，再到肝纤维化" loading="lazy"></div>
+<p class="q">轻度，是不是就代表我的肝没什么大问题？</p>
+<p>首先，腹部B超是医生用超声波来观察肝脏等腹部器官的检查。肝脏里的脂肪积多了，在超声图像上会出现一些变化。</p>
+<p>报告上的“轻度”，通常说的是B超上看到的脂肪堆积迹象比较轻。 至于肝脏有没有受损、受损到什么程度，还得看这些脂肪积在肝里以后，发生了什么。</p>
+<p>医生会特别留意一种变化，叫作“肝纤维化”。</p>
+<p>有些人肝里虽然积了脂肪，但肝细胞并没有明显受损。而另一些人，积存的脂肪会让肝细胞受损，导致肝脏出现炎症。</p>
+<p>如果损伤反复发生，肝脏一边受损、一边修复，就可能慢慢积下类似疤痕的组织，就像皮肤受伤后可能留下疤一样——也就是肝纤维化。</p>
+<p>所以，同样是B超写着“轻度脂肪肝”，每个人的肝脏受损情况可能不同。</p>
+<p>第一次查出来后，建议把B超和抽血报告一起带去门诊。医生会结合检查结果和你的身体情况，判断接下来是定期复查，还是需要进一步检查。</p>
+<h2>三、离看医生还有几天，我现在能从报告上看出点什么吗？</h2>
+<div class="wx-fig" data-label="配图 3"><img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=1600&q=80&auto=format&fit=crop" alt="试管架上的采血管" loading="lazy"></div>
+<p class="q">可是，在看医生前，我很担心。</p>
+<p>不要着急！请翻开你的抽血报告，找到“肝功能”一栏，里面有两个看起来很相似的项目：谷丙转氨酶（ALT）和谷草转氨酶（AST）。</p>
+<p>报告上有时写中文，有时也会标上括号里的字母。</p>
+<p>“转氨酶”看起来很复杂，不过，你可以把它先理解成原本待在人体细胞里、参与日常工作的两种物质。</p>
+<p>肝细胞受损时，血液里测到的量可能升高，所以医生会把它们当作判断肝细胞是否受损的线索。</p>
+<p>那如果这两项都在正常范围内呢？可以接着想想上一节说的“疤”。转氨酶反映的是这次抽血时的情况，肝纤维化说的是肝脏有没有在过去的损伤和修复中积下类似疤痕的组织。 它们两个并不是一回事：即使转氨酶正常，也可能有肝纤维化。</p>
+<p>除了转氨酶结果，医生还可能看报告里另外几项：</p>
+<dl>
+<div><dt>血糖</dt><dd>反映血液里葡萄糖的水平。医生会据此了解你有没有血糖偏高，或已经确诊的糖尿病控制得怎么样。</dd></div>
+<div><dt>血脂</dt><dd>反映血液里几类脂质的水平。报告上的“甘油三酯”和“胆固醇”都属于这一栏。</dd></div>
+<div><dt>血小板计数</dt><dd>血小板是血液里参与止血的成分。它通常列在“血常规”里，医生把它和你的年龄、转氨酶结果放在一起，初步估计肝纤维化的风险。</dd></div>
+</dl>
+<p>去门诊前，带上整份报告，把B超、肝功能和血常规放在一起。</p>
+<p>医生通常会先看报告、问病史。除了有没有糖尿病、高血压或其他肝病，也可能问你平时喝不喝酒、最近体重有没有变化、现在用了哪些药。记不住药名，可以拍药盒，平时吃的保健品也可以一起告诉医生。如果有喝酒的习惯，尽量说清楚喝什么酒、每周喝几次、每次大概喝多少。</p>
+<p>之后，如需进一步评估，医生会安排“肝脏弹性检查”。</p>
+<p>检查时，医生用仪器从体表测量肝脏的硬度，检查本身不用穿刺。医生会把硬度结果，结合你已有的报告一起看。</p>
+<p>如果初步评估提示风险低，医生会建议按计划随访，可以在这时候问清楚医生这三个问题：</p>
+<ol>
+<li>我这次的脂肪肝，可能和什么有关？</li>
+<li>现在还需要补做检查吗？</li>
+<li>下次什么时候复查，主要看哪几项？</li>
+</ol>
+<h2>四、看完门诊，回家以后怎么做？</h2>
+<div class="wx-fig" data-label="配图 4"><img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?w=1600&q=80&auto=format&fit=crop" alt="在草地小路上散步" loading="lazy"></div>
+<p class="q">医生叮嘱你要“多注意饮食、多运动”，可是你到底应该怎么吃，怎么运动，需要买点护肝药吗？</p>
+<p>我们一个问题一个问题解答。</p>
+<p><b>第一，</b>先不用急着买护肝药，医生决定是否用药时，会考虑脂肪肝可能的原因、肝脏受损的情况，以及你有没有糖尿病、血脂异常等问题。如果你已经在吃降糖药、降脂药或其他处方药，按原来的医嘱用药，担心手上的药和肝脏检查结果有关，可以把药盒和剂量带给医生，由医生判断是否需要调整。</p>
+<p><b>第二，</b>吃饭，可以从最常吃的一餐改起。例如，你平时午饭是一大份炒饭加一瓶可乐，炒饭推荐换成米饭配一份青菜，一份鱼、鸡蛋或豆腐，可乐推荐换成白水或无糖茶。一顿饭里需要有主食、蔬菜和提供蛋白质的食物，具体份量要结合你的体重、活动量、血糖情况而定。</p>
+<p>假如医生建议减重，请医生帮你定一个循序渐进的目标，再看看每餐应该怎么调整。</p>
+<p><b>第三，</b>关于运动，你不需要突然去健身房，或者跑步好几公里，从当下开始，从小事开始，从你有空的那十几分钟开始。</p>
+<p>长期久坐，就趁接水、上厕所的时候起来走一走，做一些伸展运动。晚饭后出去散散步，走个十五分钟，饭后百步走，活到九十九。</p>
+<p>身体条件允许的话，可以快走，怎么判断速度？——试着边走边说话，呼吸比平时快，但还能和人聊天，不过，唱歌会有点吃力，大约便是中等强度。</p>
+<p>走习惯后，可以尝试着把15分钟加到20分钟，或者每周多走一天，逐步朝每周累计约150分钟的中等强度运动靠近。如果喜欢骑车和游泳，也可以顺着自己喜欢的方式锻炼。总之，管住嘴，多动腿。规律运动，有助于减少肝脏里囤积的脂肪。</p>
+<div class="wx-fig" data-label="配图 5"></div>
+<p>第一次在体检报告上看见“脂肪肝”，心里一紧很正常。看完门诊，有些话有些问题来不及问，还是不太清楚。生活里有加班、带孩子、没时间做饭——你不是一个人，让我们从今晚做起，从迈开第一步散散心做起，获得健康身体，也获得内心的平静。</p>
+<div class="src"><p class="lbl">参考资料</p><ul><li>[1] 中国医药生物技术协会慢病管理分会, 中国研究型医院学会肝病（中西医结合）专业委员会, 中华医学会全科医学分会, 等. 代谢相关脂肪性肝病基层诊疗与管理指南（2025年）[J]. 中华肝脏病杂志, 2025, 33(5): 422-433. DOI: 10.3760/cma.j.cn501113-20250305-00073. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12869176/" target="_blank" rel="noopener">全文</a></li><li>[2] 中华医学会肝病学分会脂肪肝和酒精性肝病学组. 代谢相关（非酒精性）脂肪性肝病防治指南（2024年版）[J]. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12677420/" target="_blank" rel="noopener">全文</a></li><li>[3] RINELLA M E, NEUSCHWANDER-TETRI B A, SIDDIQUI M S, et al. AASLD practice guidance on the clinical assessment and management of nonalcoholic fatty liver disease[J]. Hepatology, 2023, 77(5): 1797-1835. DOI: 10.1097/HEP.0000000000000323. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10735173/" target="_blank" rel="noopener">全文</a></li><li>[4] DONNELLY K L, SMITH C I, SCHWARZENBERG S J, et al. Sources of fatty acids stored in liver and secreted via lipoproteins in patients with nonalcoholic fatty liver disease[J]. Journal of Clinical Investigation, 2005, 115(5): 1343-1351. DOI: 10.1172/JCI23621. <a href="https://www.jci.org/articles/view/23621" target="_blank" rel="noopener">全文</a></li><li>[5] CENTERS FOR DISEASE CONTROL AND PREVENTION. How to measure physical activity intensity[EB/OL]. [2026-11-18]. <a href="https://www.cdc.gov/physical-activity-basics/measuring/index.html" target="_blank" rel="noopener">原文</a></li></ul></div>
+        <div class="wx-end"><span>分享</span><span>收藏</span><span>赞</span><span>推荐</span></div>
+        </article>
+      </div>
+    </aside>
+    <div class="duo-r">
+      <article class="wx wx-wide">
+        <h1>体检查出脂肪肝，该怎么办？</h1>
+        <div class="wx-meta"><span class="orig">原创</span><span class="acc">林怡馨</span></div>
+        <div class="wx-fig cover" data-label="封面图"><img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?w=1600&q=80&auto=format&fit=crop" alt="医生在病历上书写" loading="lazy"></div>
+<p>体检报告下来了，翻到腹部B超那一页，结论里多了一行“轻度脂肪肝”——这是什么？严重吗？我会有事吗？</p>
+<p>其他报告一堆专业术语，你根本就看不懂，回想最近以来的吃饭、睡觉，都很正常，也没觉得哪里不舒服——所以，这个到底是什么？是你平时注意饮食就可以，还是要吃药，或者必须约门诊？</p>
+<p class="key">如果你是第一次查出轻度脂肪肝，平时也没有不舒服，可以先约一次普通门诊，带上完整的体检报告，让医生做个初步评估。 等门诊的时候，可以先从少喝甜饮料、多走路这类小事做起。要不要吃药、多久复查，等医生了解你的情况后再定。</p>
+<h2>一、脂肪肝是什么？肝里怎么会有脂肪？</h2>
+<div class="wx-fig" data-label="配图 1"><img src="images/fl-sources.jpg" alt="肝脏脂肪的三个来源：食物、身体储存的脂肪、碳水和含糖饮料" loading="lazy"></div>
+<p>脂肪肝，顾名思义，就是肝脏里的细胞存了太多脂肪。</p>
+<p>正常肝细胞内本来就有少量脂肪，主要参与日常代谢。但当脂肪在肝细胞里积得过多，肝脏在B超图像上的样子就会发生变化。体检报告上的“脂肪肝”，说的就是医生在B超上看到了脂肪积存的迹象。</p>
+<p class="q">有的人可能会问：“我平时也没怎么吃肥肉啊，怎么会有脂肪肝呢？”</p>
+<p>实际上，肝脏里的脂肪主要有三个来源：</p>
+<p><b>第一，食物。</b> 肥肉、炒菜用的油、蛋糕使用的奶油都含有脂肪。食物里的脂肪被消化吸收后，其中一部分会随血液到达肝脏。</p>
+<p><b>第二，身体原先存下的脂肪。</b> 两顿饭之间，身体需要能量，会从脂肪组织里释放脂肪到血液中，一些会被送到肝脏。而饭后，身体会分泌一种叫胰岛素的激素，用于给脂肪组织发出“少释放脂肪”的信号。</p>
+<p>就像同样一口辣椒，有人觉得很辣，有人觉得还好，每个人的脂肪组织对胰岛素信号反应也有强弱，有的人反应相对较弱，释放到血液里的脂肪就可能相对增多，而流到肝脏的也可能随之增多。</p>
+<p><b>第三，肝脏自己合成。</b> 米饭、面条等碳水里的淀粉消化后，会分解成葡萄糖供身体使用。肝脏也可以用一部分糖来合成脂肪，比如，如果你经常在三餐以外，或者三餐中喝含糖饮料，那么长期摄入的能量也许会超过身体所消耗的量，而肝脏，也就也许合成更多脂肪。</p>
+<h2>二、报告写了“轻度”，我的肝到底怎么样？</h2>
+<div class="wx-fig" data-label="配图 2"><img src="images/fl-fibrosis.jpg" alt="从健康肝脏到脂肪积存，再到肝纤维化" loading="lazy"></div>
+<p class="q">轻度，是不是就代表我的肝没什么大问题？</p>
+<p>首先，腹部B超是医生用超声波来观察肝脏等腹部器官的检查。肝脏里的脂肪积多了，在超声图像上会出现一些变化。</p>
+<p>报告上的“轻度”，通常说的是B超上看到的脂肪堆积迹象比较轻。 至于肝脏有没有受损、受损到什么程度，还得看这些脂肪积在肝里以后，发生了什么。</p>
+<p>医生会特别留意一种变化，叫作“肝纤维化”。</p>
+<p>有些人肝里虽然积了脂肪，但肝细胞并没有明显受损。而另一些人，积存的脂肪会让肝细胞受损，导致肝脏出现炎症。</p>
+<p>如果损伤反复发生，肝脏一边受损、一边修复，就可能慢慢积下类似疤痕的组织，就像皮肤受伤后可能留下疤一样——也就是肝纤维化。</p>
+<p>所以，同样是B超写着“轻度脂肪肝”，每个人的肝脏受损情况可能不同。</p>
+<p>第一次查出来后，建议把B超和抽血报告一起带去门诊。医生会结合检查结果和你的身体情况，判断接下来是定期复查，还是需要进一步检查。</p>
+<h2>三、离看医生还有几天，我现在能从报告上看出点什么吗？</h2>
+<div class="wx-fig" data-label="配图 3"><img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=1600&q=80&auto=format&fit=crop" alt="试管架上的采血管" loading="lazy"></div>
+<p class="q">可是，在看医生前，我很担心。</p>
+<p>不要着急！请翻开你的抽血报告，找到“肝功能”一栏，里面有两个看起来很相似的项目：谷丙转氨酶（ALT）和谷草转氨酶（AST）。</p>
+<p>报告上有时写中文，有时也会标上括号里的字母。</p>
+<p>“转氨酶”看起来很复杂，不过，你可以把它先理解成原本待在人体细胞里、参与日常工作的两种物质。</p>
+<p>肝细胞受损时，血液里测到的量可能升高，所以医生会把它们当作判断肝细胞是否受损的线索。</p>
+<p>那如果这两项都在正常范围内呢？可以接着想想上一节说的“疤”。转氨酶反映的是这次抽血时的情况，肝纤维化说的是肝脏有没有在过去的损伤和修复中积下类似疤痕的组织。 它们两个并不是一回事：即使转氨酶正常，也可能有肝纤维化。</p>
+<p>除了转氨酶结果，医生还可能看报告里另外几项：</p>
+<dl>
+<div><dt>血糖</dt><dd>反映血液里葡萄糖的水平。医生会据此了解你有没有血糖偏高，或已经确诊的糖尿病控制得怎么样。</dd></div>
+<div><dt>血脂</dt><dd>反映血液里几类脂质的水平。报告上的“甘油三酯”和“胆固醇”都属于这一栏。</dd></div>
+<div><dt>血小板计数</dt><dd>血小板是血液里参与止血的成分。它通常列在“血常规”里，医生把它和你的年龄、转氨酶结果放在一起，初步估计肝纤维化的风险。</dd></div>
+</dl>
+<p>去门诊前，带上整份报告，把B超、肝功能和血常规放在一起。</p>
+<p>医生通常会先看报告、问病史。除了有没有糖尿病、高血压或其他肝病，也可能问你平时喝不喝酒、最近体重有没有变化、现在用了哪些药。记不住药名，可以拍药盒，平时吃的保健品也可以一起告诉医生。如果有喝酒的习惯，尽量说清楚喝什么酒、每周喝几次、每次大概喝多少。</p>
+<p>之后，如需进一步评估，医生会安排“肝脏弹性检查”。</p>
+<p>检查时，医生用仪器从体表测量肝脏的硬度，检查本身不用穿刺。医生会把硬度结果，结合你已有的报告一起看。</p>
+<p>如果初步评估提示风险低，医生会建议按计划随访，可以在这时候问清楚医生这三个问题：</p>
+<ol>
+<li>我这次的脂肪肝，可能和什么有关？</li>
+<li>现在还需要补做检查吗？</li>
+<li>下次什么时候复查，主要看哪几项？</li>
+</ol>
+<h2>四、看完门诊，回家以后怎么做？</h2>
+<div class="wx-fig" data-label="配图 4"><img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?w=1600&q=80&auto=format&fit=crop" alt="在草地小路上散步" loading="lazy"></div>
+<p class="q">医生叮嘱你要“多注意饮食、多运动”，可是你到底应该怎么吃，怎么运动，需要买点护肝药吗？</p>
+<p>我们一个问题一个问题解答。</p>
+<p><b>第一，</b>先不用急着买护肝药，医生决定是否用药时，会考虑脂肪肝可能的原因、肝脏受损的情况，以及你有没有糖尿病、血脂异常等问题。如果你已经在吃降糖药、降脂药或其他处方药，按原来的医嘱用药，担心手上的药和肝脏检查结果有关，可以把药盒和剂量带给医生，由医生判断是否需要调整。</p>
+<p><b>第二，</b>吃饭，可以从最常吃的一餐改起。例如，你平时午饭是一大份炒饭加一瓶可乐，炒饭推荐换成米饭配一份青菜，一份鱼、鸡蛋或豆腐，可乐推荐换成白水或无糖茶。一顿饭里需要有主食、蔬菜和提供蛋白质的食物，具体份量要结合你的体重、活动量、血糖情况而定。</p>
+<p>假如医生建议减重，请医生帮你定一个循序渐进的目标，再看看每餐应该怎么调整。</p>
+<p><b>第三，</b>关于运动，你不需要突然去健身房，或者跑步好几公里，从当下开始，从小事开始，从你有空的那十几分钟开始。</p>
+<p>长期久坐，就趁接水、上厕所的时候起来走一走，做一些伸展运动。晚饭后出去散散步，走个十五分钟，饭后百步走，活到九十九。</p>
+<p>身体条件允许的话，可以快走，怎么判断速度？——试着边走边说话，呼吸比平时快，但还能和人聊天，不过，唱歌会有点吃力，大约便是中等强度。</p>
+<p>走习惯后，可以尝试着把15分钟加到20分钟，或者每周多走一天，逐步朝每周累计约150分钟的中等强度运动靠近。如果喜欢骑车和游泳，也可以顺着自己喜欢的方式锻炼。总之，管住嘴，多动腿。规律运动，有助于减少肝脏里囤积的脂肪。</p>
+<div class="wx-fig" data-label="配图 5"></div>
+<p>第一次在体检报告上看见“脂肪肝”，心里一紧很正常。看完门诊，有些话有些问题来不及问，还是不太清楚。生活里有加班、带孩子、没时间做饭——你不是一个人，让我们从今晚做起，从迈开第一步散散心做起，获得健康身体，也获得内心的平静。</p>
+<div class="src"><p class="lbl">参考资料</p><ul><li>[1] 中国医药生物技术协会慢病管理分会, 中国研究型医院学会肝病（中西医结合）专业委员会, 中华医学会全科医学分会, 等. 代谢相关脂肪性肝病基层诊疗与管理指南（2025年）[J]. 中华肝脏病杂志, 2025, 33(5): 422-433. DOI: 10.3760/cma.j.cn501113-20250305-00073. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12869176/" target="_blank" rel="noopener">全文</a></li><li>[2] 中华医学会肝病学分会脂肪肝和酒精性肝病学组. 代谢相关（非酒精性）脂肪性肝病防治指南（2024年版）[J]. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12677420/" target="_blank" rel="noopener">全文</a></li><li>[3] RINELLA M E, NEUSCHWANDER-TETRI B A, SIDDIQUI M S, et al. AASLD practice guidance on the clinical assessment and management of nonalcoholic fatty liver disease[J]. Hepatology, 2023, 77(5): 1797-1835. DOI: 10.1097/HEP.0000000000000323. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10735173/" target="_blank" rel="noopener">全文</a></li><li>[4] DONNELLY K L, SMITH C I, SCHWARZENBERG S J, et al. Sources of fatty acids stored in liver and secreted via lipoproteins in patients with nonalcoholic fatty liver disease[J]. Journal of Clinical Investigation, 2005, 115(5): 1343-1351. DOI: 10.1172/JCI23621. <a href="https://www.jci.org/articles/view/23621" target="_blank" rel="noopener">全文</a></li><li>[5] CENTERS FOR DISEASE CONTROL AND PREVENTION. How to measure physical activity intensity[EB/OL]. [2026-11-18]. <a href="https://www.cdc.gov/physical-activity-basics/measuring/index.html" target="_blank" rel="noopener">原文</a></li></ul></div>
+        <div class="wx-end"><span>分享</span><span>收藏</span><span>赞</span><span>推荐</span></div>
+      </article>
+      <a class="next" href="#norovirus"><span>下一篇 · 大众科普</span><b>突然上吐下泻，还发烧？别慌，可能是诺如病毒胃肠炎</b></a>
+      <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
     </div>
   </div>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
+</main>
 
-  <div class="col a-body">
-    <article class="prose">
-      <p>体检报告下来了，翻到腹部B超那一页，结论里多了一行“轻度脂肪肝”——这是什么？严重吗？我会有事吗？</p>
-      <p>其他报告一堆专业术语，你根本就看不懂，回想最近以来的吃饭、睡觉，都很正常，也没觉得哪里不舒服——所以，这个到底是什么？是你平时注意饮食就可以，还是要吃药，或者必须约门诊？</p>
-      <p class="key">如果你是第一次查出轻度脂肪肝，平时也没有不舒服，可以先约一次普通门诊，带上完整的体检报告，让医生做个初步评估。 等门诊的时候，可以先从少喝甜饮料、多走路这类小事做起。要不要吃药、多久复查，等医生了解你的情况后再定。</p>
-
-      <h2>一、脂肪肝是什么？肝里怎么会有脂肪？</h2>
-      <p>脂肪肝，顾名思义，就是肝脏里的细胞存了太多脂肪。</p>
-      <p>正常肝细胞内本来就有少量脂肪，主要参与日常代谢。但当脂肪在肝细胞里积得过多，肝脏在B超图像上的样子就会发生变化。体检报告上的“脂肪肝”，说的就是医生在B超上看到了脂肪积存的迹象。</p>
-      <p class="q">有的人可能会问：“我平时也没怎么吃肥肉啊，怎么会有脂肪肝呢？”</p>
-      <p>实际上，肝脏里的脂肪主要有三个来源：</p>
-      <p><b>第一，食物。</b> 肥肉、炒菜用的油、蛋糕使用的奶油都含有脂肪。食物里的脂肪被消化吸收后，其中一部分会随血液到达肝脏。</p>
-      <p><b>第二，身体原先存下的脂肪。</b> 两顿饭之间，身体需要能量，会从脂肪组织里释放脂肪到血液中，一些会被送到肝脏。而饭后，身体会分泌一种叫胰岛素的激素，用于给脂肪组织发出“少释放脂肪”的信号。</p>
-      <p>就像同样一口辣椒，有人觉得很辣，有人觉得还好，每个人的脂肪组织对胰岛素信号反应也有强弱，有的人反应相对较弱，释放到血液里的脂肪就可能相对增多，而流到肝脏的也可能随之增多。</p>
-      <p><b>第三，肝脏自己合成。</b> 米饭、面条等碳水里的淀粉消化后，会分解成葡萄糖供身体使用。肝脏也可以用一部分糖来合成脂肪，比如，如果你经常在三餐以外，或者三餐中喝含糖饮料，那么长期摄入的能量也许会超过身体所消耗的量，而肝脏，也就也许合成更多脂肪。</p>
-
-      <h2>二、报告写了“轻度”，我的肝到底怎么样？</h2>
-      <p class="q">轻度，是不是就代表我的肝没什么大问题？</p>
-      <p>首先，腹部B超是医生用超声波来观察肝脏等腹部器官的检查。肝脏里的脂肪积多了，在超声图像上会出现一些变化。</p>
-      <p>报告上的“轻度”，通常说的是B超上看到的脂肪堆积迹象比较轻。 至于肝脏有没有受损、受损到什么程度，还得看这些脂肪积在肝里以后，发生了什么。</p>
-      <p>医生会特别留意一种变化，叫作“肝纤维化”。</p>
-      <p>有些人肝里虽然积了脂肪，但肝细胞并没有明显受损。而另一些人，积存的脂肪会让肝细胞受损，导致肝脏出现炎症。</p>
-      <p>如果损伤反复发生，肝脏一边受损、一边修复，就可能慢慢积下类似疤痕的组织，就像皮肤受伤后可能留下疤一样——也就是肝纤维化。</p>
-      <p>所以，同样是B超写着“轻度脂肪肝”，每个人的肝脏受损情况可能不同。</p>
-      <p>第一次查出来后，建议把B超和抽血报告一起带去门诊。医生会结合检查结果和你的身体情况，判断接下来是定期复查，还是需要进一步检查。</p>
-
-      <h2>三、离看医生还有几天，我现在能从报告上看出点什么吗？</h2>
-      <p class="q">可是，在看医生前，我很担心。</p>
-      <p>不要着急！请翻开你的抽血报告，找到“肝功能”一栏，里面有两个看起来很相似的项目：谷丙转氨酶（ALT）和谷草转氨酶（AST）。</p>
-      <p>报告上有时写中文，有时也会标上括号里的字母。</p>
-      <p>“转氨酶”看起来很复杂，不过，你可以把它先理解成原本待在人体细胞里、参与日常工作的两种物质。</p>
-      <p>肝细胞受损时，血液里测到的量可能升高，所以医生会把它们当作判断肝细胞是否受损的线索。</p>
-      <p>那如果这两项都在正常范围内呢？可以接着想想上一节说的“疤”。转氨酶反映的是这次抽血时的情况，肝纤维化说的是肝脏有没有在过去的损伤和修复中积下类似疤痕的组织。 它们两个并不是一回事：即使转氨酶正常，也可能有肝纤维化。</p>
-      <p>除了转氨酶结果，医生还可能看报告里另外几项：</p>
-      <dl>
-        <div><dt>血糖</dt><dd>反映血液里葡萄糖的水平。医生会据此了解你有没有血糖偏高，或已经确诊的糖尿病控制得怎么样。</dd></div>
-        <div><dt>血脂</dt><dd>反映血液里几类脂质的水平。报告上的“甘油三酯”和“胆固醇”都属于这一栏。</dd></div>
-        <div><dt>血小板计数</dt><dd>血小板是血液里参与止血的成分。它通常列在“血常规”里，医生把它和你的年龄、转氨酶结果放在一起，初步估计肝纤维化的风险。</dd></div>
-      </dl>
-      <p>去门诊前，带上整份报告，把B超、肝功能和血常规放在一起。</p>
-      <p>医生通常会先看报告、问病史。除了有没有糖尿病、高血压或其他肝病，也可能问你平时喝不喝酒、最近体重有没有变化、现在用了哪些药。记不住药名，可以拍药盒，平时吃的保健品也可以一起告诉医生。如果有喝酒的习惯，尽量说清楚喝什么酒、每周喝几次、每次大概喝多少。</p>
-      <p>之后，如需进一步评估，医生会安排“肝脏弹性检查”。</p>
-      <p>检查时，医生用仪器从体表测量肝脏的硬度，检查本身不用穿刺。医生会把硬度结果，结合你已有的报告一起看。</p>
-      <p>如果初步评估提示风险低，医生会建议按计划随访，可以在这时候问清楚医生这三个问题：</p>
-      <ol>
-        <li>我这次的脂肪肝，可能和什么有关？</li>
-        <li>现在还需要补做检查吗？</li>
-        <li>下次什么时候复查，主要看哪几项？</li>
-      </ol>
-
-      <h2>四、看完门诊，回家以后怎么做？</h2>
-      <p class="q">医生叮嘱你要“多注意饮食、多运动”，可是你到底应该怎么吃，怎么运动，需要买点护肝药吗？</p>
-      <p>我们一个问题一个问题解答。</p>
-      <p><b>第一，</b>先不用急着买护肝药，医生决定是否用药时，会考虑脂肪肝可能的原因、肝脏受损的情况，以及你有没有糖尿病、血脂异常等问题。如果你已经在吃降糖药、降脂药或其他处方药，按原来的医嘱用药，担心手上的药和肝脏检查结果有关，可以把药盒和剂量带给医生，由医生判断是否需要调整。</p>
-      <p><b>第二，</b>吃饭，可以从最常吃的一餐改起。例如，你平时午饭是一大份炒饭加一瓶可乐，炒饭推荐换成米饭配一份青菜，一份鱼、鸡蛋或豆腐，可乐推荐换成白水或无糖茶。一顿饭里需要有主食、蔬菜和提供蛋白质的食物，具体份量要结合你的体重、活动量、血糖情况而定。</p>
-      <p>假如医生建议减重，请医生帮你定一个循序渐进的目标，再看看每餐应该怎么调整。</p>
-      <p><b>第三，</b>关于运动，你不需要突然去健身房，或者跑步好几公里，从当下开始，从小事开始，从你有空的那十几分钟开始。</p>
-      <p>长期久坐，就趁接水、上厕所的时候起来走一走，做一些伸展运动。晚饭后出去散散步，走个十五分钟，饭后百步走，活到九十九。</p>
-      <p>身体条件允许的话，可以快走，怎么判断速度？——试着边走边说话，呼吸比平时快，但还能和人聊天，不过，唱歌会有点吃力，大约便是中等强度。</p>
-      <p>走习惯后，可以尝试着把15分钟加到20分钟，或者每周多走一天，逐步朝每周累计约150分钟的中等强度运动靠近。如果喜欢骑车和游泳，也可以顺着自己喜欢的方式锻炼。总之，管住嘴，多动腿。规律运动，有助于减少肝脏里囤积的脂肪。</p>
-      <hr>
-      <p>第一次在体检报告上看见“脂肪肝”，心里一紧很正常。看完门诊，有些话有些问题来不及问，还是不太清楚。生活里有加班、带孩子、没时间做饭——你不是一个人，让我们从今晚做起，从迈开第一步散散心做起，获得健康身体，也获得内心的平静。</p>
-    </article>
-    <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
+<!-- ============ norovirus ============ -->
+<main class="view" data-view="norovirus">
+  <div class="duo">
+    <aside class="duo-l">
+      <p class="duo-cap">公众号预览</p>
+      <div class="phone">
+        <div class="wx-top">
+          <div class="sb"><span>9:41</span><span class="sbi"><i></i><i></i><i></i><b></b></span></div>
+          <div class="nav"><span class="back" aria-hidden="true"></span><span class="dots" aria-hidden="true">···</span></div>
+        </div>
+        <article class="wx">
+        <h1>突然上吐下泻，还发烧？别慌，可能是诺如病毒胃肠炎</h1>
+        <div class="wx-meta"><span class="orig">原创</span><span class="acc">林怡馨</span></div>
+        <div class="wx-fig cover" data-label="封面图"><img src="https://images.unsplash.com/photo-1604830926588-b51d5ddeba7b?w=1600&q=80&auto=format&fit=crop" alt="蜷在沙发上休息的人" loading="lazy"></div>
+<p>秋冬时节，之前还好好的，这几天突然开始恶心、呕吐，频繁跑厕所，到最后拉出来的几乎都是水。浑身没劲，一量体温，竟然还发烧了。</p>
+<p class="q">“我是吃坏了什么东西吗？还是感染了病毒？严重吗？我要吃药还是要去医院，我会不会传染？”</p>
+<p>先不要慌，小编来告诉你，这很可能是“诺如病毒胃肠炎”，也叫“冬季呕吐病”。它来得急，传得快，多数人经过适当休息和处理，会在几天内自行好转。</p>
+<h2>一、“诺如病毒”是什么？为什么我会又吐又拉？</h2>
+<div class="wx-fig" data-label="配图 1"><img src="images/nv-villi.jpg" alt="正常的小肠绒毛与感染后变短变钝的绒毛" loading="lazy"></div>
+<p>诺如病毒是一类能感染人体，引起急性胃肠炎的病毒，典型表现是突然恶心、呕吐、腹泻，有的人还会腹痛、发热。</p>
+<h3>为什么会拉肚子？</h3>
+<p>我们吃下去的食物经过消化道，会被分解成身体可以利用的小分子。而小肠内壁有许多细小绒毛，如同密密排布的“牙刷毛”，能够增加吸收面积，帮助身体吸收营养和水分。</p>
+<p>感染诺如病毒后，这些绒毛可能暂时变短、变钝，而肠道中一些帮助消化食物的，消化能力也会随之下降。</p>
+<p>这导致食物没有被充分消化、吸收，更多水分没有进入身体被利用，反而被留在了肠道之中，最后随着粪便排出，于是大便变稀，到最后自然也就像水一样了。</p>
+<p>所以腹泻的背后，其实是肠道受到病毒影响，暂时无法像平时一样处理食物和吸收水分。</p>
+<p>有些人在感染后，喝牛奶反倒让腹胀、腹泻更严重了——就是因为他们的肠道暂时处理不好牛奶中的乳糖，这时候我们可以选择无乳糖牛奶。但这种情况并非人人都会发生。</p>
+<h3>那我为什么还恶心、呕吐呢？</h3>
+<p>我们消化道包含的除了肠道，还有胃。正常情况下，胃会把吃进去的食物逐渐送入小肠，这个过程叫作“胃排空”。</p>
+<p>但在病毒侵袭之下，消化道的运转受到影响，胃排空变慢——食物和液体在胃里停留得更久，也更容易出现胃不舒服、恶心，甚至呕吐。</p>
+<p>目前，诺如病毒引起吐泻的具体机制仍在研究中。同样是感染诺如病毒，有些人的症状可能偏向呕吐，有些人则明显腹泻更多，而有些人两种症状都有。</p>
+<p class="key">小编在此提醒：腹泻并不是“把病毒拉干净”，而呕吐也不代表“把病毒吐出去了就恢复了”。反复呕吐、腹泻，会不断丢失水和电解质，导致人脱水，及时补液是痊愈的重要环节。</p>
+<h2>二、为什么还会发烧，是不是病得很严重？</h2>
+<div class="wx-fig" data-label="配图 2"><img src="https://images.unsplash.com/photo-1594790628624-9e563bea851d?w=1600&q=80&auto=format&fit=crop" alt="手里拿着电子体温计" loading="lazy"></div>
+<p class="q">“可是我发烧了啊，这不是很严重吗？”</p>
+<p>先别把“发烧”和“严重”画等号——发烧是身体应对感染时的自发反应。</p>
+<p>当免疫系统发现病毒，会尝试释放一些传递信号的物质，调动免疫功能，杀死病毒，而其中部分信号会影响大脑调节体温的“温控中心”，从而使体温升高。</p>
+<p>身体会减少散热，增加产热，让体温升高，所以有的人明明在发烧，但却觉得冷，打寒战——这是身体正在努力达到新温度。</p>
+<p>约40%～50%的诺如病毒胃肠炎患者会出现发热，通常以中低热，体温在37.3～39.0℃为主，持续时间很少超过24小时。</p>
+<p>相比于用体温来判断病情是否严重，我们更需要注意的是这三点：喝得进水吗？尿量减少了吗？精神状态怎么样？</p>
+<p>喝得进水，要看喝下去有没有吐出来，要是一喝就吐，反复尝试，仍然无法喝下，则身体流失的水分难以被补回来。</p>
+<p>尿量和平时比较，身体缺水时，肾脏会尽量减少水分排出，尿量可能减少，且尿色变深。</p>
+<p>至于精神状态，生病后没力气，想休息很常见，但要是异常嗜睡，反应迟钝，甚至意识模糊，难以唤醒，则反应异常，需即刻就医。</p>
+<p>所以，对于吐泻的人，即便体温不高，如果一直吐，一直拉，又喝不进去水，这就可能会出现脱水，脱水才是需要重点防范的信号。</p>
+<p>而有的人虽然发热，但能喝水，能正常排尿，反应清楚，整体状态可能相对稳定，可以继续持续观察体温、吐泻次数和补液情况。</p>
+<h2>三、又吐又拉，眼下最该做什么？</h2>
+<div class="wx-fig" data-label="配图 3"><img src="https://images.unsplash.com/photo-1624948465027-6f9b51067557?w=1600&q=80&auto=format&fit=crop" alt="手里端着一杯水" loading="lazy"></div>
+<p class="q">所以我现在应该做什么？</p>
+<p>先看身体状态，如果已经出现意识模糊、难以唤醒、晕厥，或突然剧烈腹痛，应立即急诊就医。如果反复呕吐，连小口液体都留不住，或尿量明显减少，也需及时就医。</p>
+<p>但如果人清醒、能够喝进去，可以先从少量多次补液做起。</p>
+<h3>1.补液并不只是“多喝水”。</h3>
+<p>呕吐、腹泻时，身体流失的不只有水，还有钠、钾等电解质。这些物质参与维持身体的水分平衡，以及神经、肌肉的正常工作。</p>
+<p>在多次呕吐、腹泻后，只喝白开水，难以充分补回流失的电解质，这时候，我们应该选择的是口服补液盐。</p>
+<p>口服补液盐是按比例配好的葡萄糖和电解质，冲水后饮用。葡萄糖在这里一是增加甜味，方便入口，二是让肠道吸收葡萄糖的时候，也带动钠的吸收，钠被吸收了，水分也就被随之吸收了，</p>
+<p>它可以帮助腹泻的人的肠道，通过这种方式吸收一些水分。</p>
+<h3>2.不想去、没力气去药店，运动饮料、电解质水和可乐能代替吗？</h3>
+<p>我们也可以在家自制口服补液盐，自行调配时，务必确保用量准确，用精确的茶匙计量，切记盐宁可放少，也不可放多。如果放多，反而会适得其反，让患者流失更多水分。最安全的做法是在正规药店购买口服补液盐Ⅲ，按照说明书使用。</p>
+<div class="recipe"><p class="lbl">自制口服补液盐配方：</p><div class="rrow"><div class="ri"><svg viewBox="0 0 48 56" aria-hidden="true"><path d="M10 6h28l-3 44a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12.2 22c4 2.5 8 2.5 12 0s8-2.5 11.6 0l-2.2 28a1.5 1.5 0 0 1-1.5 1.5H16a1.5 1.5 0 0 1-1.5-1.5z" fill="currentColor" opacity=".22"/></svg><span>1升水</span></div><span class="plus" aria-hidden="true">+</span><div class="ri"><svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M8 30l14-7 14 7-14 7z"/><path d="M8 30v12l14 7V37"/><path d="M36 30v12l-14 7"/><path d="M20 15l12-6 12 6-12 6z"/><path d="M20 15v10M44 15v10l-8 4"/></g></svg><span>30毫升砂糖</span></div><span class="plus" aria-hidden="true">+</span><div class="ri"><svg viewBox="0 0 48 56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M14 18h20v30a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z"/><path d="M14 18c0-8 4.5-12 10-12s10 4 10 12"/></g><g fill="currentColor"><circle cx="20" cy="11" r="1.4"/><circle cx="24" cy="9" r="1.4"/><circle cx="28" cy="11" r="1.4"/></g></svg><span>2.5毫升盐</span></div></div></div>
+<p>将水、糖和盐混合，饮用前务必确保所有糖和盐都已溶解，且补充液清澈透明。可以在饮料中加入两茶匙浓缩果汁或糖浆调味。</p>
+<p>运动饮料和普通“电解质水”，虽然也含有糖和电解质，但配比却不一定适合吐泻时的补液需求，不能直接当作替代品。也不推荐饮用果汁、汽水等含糖较高的饮料，过多糖也会加重腹泻。</p>
+<p>补液的主要任务是预防和纠正脱水，喝了以后依然吐泻不止，但无持续呕吐或症状加重，则为正常情况。最终患者会靠自身免疫力，自行逐渐转好。</p>
+<h3>3.一喝就恶心，怎么办？</h3>
+<p>胃还不舒服时，别勉强自己一次喝得太多。建议先喝一小口，或使用小勺子慢慢服用，少量多次补充，之后再逐渐增加。</p>
+<p>如果患者是孩子，国家卫健委的建议是：每次喂10～20毫升，间隔5～10分钟再喂一次，根据孩子的耐受情况调整。</p>
+<p>要是喝进去后不久吐出，属于正常情况，不需要立刻大量补灌，推荐稍作停顿，待恶心缓解后，更少、更慢地尝试喝下。</p>
+<p>如经过反复尝试，仍然一喝就吐，请不要在家硬撑，这说明依赖口服补液的方法走不通，请立刻就医评估——医生会帮助你恢复健康。</p>
+<h2>四、还能吃东西吗？怎么吃才能更舒服？</h2>
+<div class="wx-fig" data-label="配图 4"><img src="https://images.unsplash.com/photo-1621658537360-dfcb008fe19f?w=1600&q=80&auto=format&fit=crop" alt="一碗粥" loading="lazy"></div>
+<p>恶心明显，先少量多次补液，无需强迫进食。等到能吃得下，就从小份、清淡的食物开始。</p>
+<table class="tbl"><thead><tr><th scope="col">食物类别</th><th scope="col">可以准备什么</th></tr></thead><tbody><tr><th scope="row">粥类</th><td>大米粥、小米粥、南瓜粥、胡萝卜粥、瘦肉粥</td></tr><tr><th scope="row">米饭、面食</th><td>软米饭、清汤面、鸡蛋面、面片汤、馒头、花卷、原味吐司</td></tr><tr><th scope="row">蛋类</th><td>蒸蛋羹、蛋花汤、煮鸡蛋</td></tr><tr><th scope="row">鱼肉、禽肉和瘦肉</th><td>清蒸鱼、鱼片面、鸡肉粥、鸡肉末、瘦肉末蒸蛋、冬瓜肉片汤</td></tr><tr><th scope="row">豆制品</th><td>蒸嫩豆腐、豆腐蛋羹、豆腐肉末汤</td></tr><tr><th scope="row">蔬菜、薯类</th><td>蒸南瓜、土豆泥、胡萝卜泥、煮冬瓜、丝瓜汤、切碎煮软的青菜</td></tr><tr><th scope="row">水果</th><td>熟香蕉、去皮苹果、蒸苹果</td></tr><tr><th scope="row">简单加餐</th><td>原味吐司、小馒头、少量苏打饼干</td></tr><tr><th scope="row">奶类</th><td>平时喝后没有不适的牛奶，喝普通奶后腹胀、腹泻者，无乳糖奶</td></tr></tbody></table>
+<h2>五、要不要吃药?哪些药可以吃，哪些不可以？</h2>
+<div class="wx-fig" data-label="配图 5"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&q=80&auto=format&fit=crop" alt="铝塑板包装的药片" loading="lazy"></div>
+<p>目前没有针对诺如病毒的特效抗病毒药物，治疗主要是补液和缓解症状，患者通常在几天之内便会自行好转。</p>
+<h3>1.拉得难受，能不能吃止泻药?</h3>
+<p>常见的药物有蒙脱石散和洛哌丁胺等抑制肠道蠕动的药物。</p>
+<table class="tbl c3"><thead><tr><th scope="col">药物</th><th scope="col">主要作用</th><th scope="col">使用时要注意什么</th></tr></thead><tbody><tr><th scope="row">蒙脱石散</th><td>覆盖、保护消化道黏膜，可用于缓解腹泻</td><td>按具体产品说明使用；与其他口服药物的服用间隔，不能代替补液</td></tr><tr><th scope="row">洛哌丁胺等抑制肠道蠕动的药物</th><td>减慢肠道运动，减少排便次数</td><td>不适合所有腹泻患者，尤其伴有发热、血便时，不要自行使用，儿童也不要自行服用</td></tr></tbody></table>
+<h3>2.发烧了可以吃退烧药吗？</h3>
+<p>退烧药主要用于缓解发热带来的不适，如果只是轻度发热，能够休息、饮水，也没有明显难受，就先观察。要是发热伴随明显头痛、肌肉酸痛，影响休息，可以选择适用的对乙酰氨基酚（扑热息痛）或布洛芬等药物。</p>
+<h3>3.受不了一直吐，可以直接去输液吗？</h3>
+<p>能喝进去补液，则通常可以先口服，如果无法口服或出现重度脱水，则需要静脉补液治疗。</p>
+<h2>六、会传给家人吗？怎样避免全家轮流中招？</h2>
+<div class="wx-fig" data-label="配图 6"><img src="https://images.unsplash.com/photo-1591610160225-861405867ba3?w=1600&q=80&auto=format&fit=crop" alt="用肥皂洗手" loading="lazy"></div>
+<p>诺如病毒容易在家庭、学校中人传人，家里有老人和孩子的，需要注意把洗手、污染物处理和日常照护等做到位，有效减少家人感染的可能性。</p>
+<h3>1.认真洗手</h3>
+<p>病毒可以通过患者的粪便、呕吐物传播，因此饭前、便后、准备食物前，以及照顾患者，与患者接触和清理污染物过后，需用肥皂或洗手液洗手至少20秒。酒精湿巾、免洗洗手液无法替代。</p>
+<h3>2.好好隔离并休息</h3>
+<p>患者尽量在家休息，暂停聚餐、串门，也不要为别人准备食物。水杯、餐具、毛巾分开使用，避免与婴幼儿和老人密切接触。</p>
+<h3>3.及时清理吐泻污染</h3>
+<p>呕吐物、粪便污染的地方要及时清理。</p>
+<p>清理时先让他人避开，戴好口罩和手套，使用含氯消毒液处理被污染的表面。不要直接拿拖把来回拖，也不要冲得四处飞溅。</p>
+<p>清理结束后，丢掉手套和口罩，认真洗手。</p>
+<p>被吐泻物弄脏的衣服和床单也不要抖动，先处理污物，再清洗消毒。没被污染的房间和衣物，保持正常清洁即可。</p>
+<h3>4.与患者共用卫生间，清理重点位置</h3>
+<p>家里只有一个卫生间，重点清洁马桶、冲水按钮、水龙头和门把手。有可见污物时，及时处理并消毒。</p>
+<p>按照我国诊疗方案，患者通常应隔离至呕吐、腹泻等症状完全消失后72小时，方可恢复返校、上班等活动。</p>
+<div class="src"><p class="lbl">参考资料</p><ul><li>1. 国家卫生健康委、国家中医药局．<a href="https://www.nhc.gov.cn/ylyjs/gzdt/202509/e81f3191191746cfae078f56fb542556.shtml" target="_blank" rel="noopener">《诺如病毒胃肠炎诊疗方案（2025年版）》</a>．2025年。</li><li>2. 中国疾病预防控制中心．<a href="https://www.chinacdc.cn/jkkp/crb/bcr/202607/t20260731_1838524.html" target="_blank" rel="noopener">《为什么诺如病毒肠炎也称作“冬季呕吐疾病”》</a>．2026年。</li><li>3. 国家卫生健康委．<a href="https://www.nhc.gov.cn/xcs/c100122/202606/ea9d8d2493f84cbf802f6ebb6155fa55.shtml" target="_blank" rel="noopener">《2026年6月17日新闻发布会文字实录》</a>．2026年。</li><li>4. 国家疾控局综合司．<a href="https://app.www.gov.cn/govdata/gov/202412/01/522296/article.html" target="_blank" rel="noopener">《学校等重点场所诺如病毒感染防控消毒技术指南》</a>．2024年。</li><li>5. 中国疾病预防控制中心．<a href="https://wjw.fj.gov.cn/jdhy/hygq/202502/t20250224_6767026.htm" target="_blank" rel="noopener">《诺如防护指南【家庭消毒篇】》</a>．福建省卫生健康委转载，2025年。</li><li>6. 美国国立糖尿病、消化和肾脏疾病研究所（NIDDK）．<a href="https://www.niddk.nih.gov/health-information/digestive-diseases/viral-gastroenteritis/eating-diet-nutrition" target="_blank" rel="noopener">《病毒性胃肠炎期间的饮食与营养》</a>（英文）。</li><li>7. 英国国家医疗服务体系（NHS）．<a href="https://www.nhs.uk/conditions/norovirus/" target="_blank" rel="noopener">《诺如病毒》</a>（英文）。</li></ul></div>
+        <div class="wx-end"><span>分享</span><span>收藏</span><span>赞</span><span>推荐</span></div>
+        </article>
+      </div>
+    </aside>
+    <div class="duo-r">
+      <article class="wx wx-wide">
+        <h1>突然上吐下泻，还发烧？别慌，可能是诺如病毒胃肠炎</h1>
+        <div class="wx-meta"><span class="orig">原创</span><span class="acc">林怡馨</span></div>
+        <div class="wx-fig cover" data-label="封面图"><img src="https://images.unsplash.com/photo-1604830926588-b51d5ddeba7b?w=1600&q=80&auto=format&fit=crop" alt="蜷在沙发上休息的人" loading="lazy"></div>
+<p>秋冬时节，之前还好好的，这几天突然开始恶心、呕吐，频繁跑厕所，到最后拉出来的几乎都是水。浑身没劲，一量体温，竟然还发烧了。</p>
+<p class="q">“我是吃坏了什么东西吗？还是感染了病毒？严重吗？我要吃药还是要去医院，我会不会传染？”</p>
+<p>先不要慌，小编来告诉你，这很可能是“诺如病毒胃肠炎”，也叫“冬季呕吐病”。它来得急，传得快，多数人经过适当休息和处理，会在几天内自行好转。</p>
+<h2>一、“诺如病毒”是什么？为什么我会又吐又拉？</h2>
+<div class="wx-fig" data-label="配图 1"><img src="images/nv-villi.jpg" alt="正常的小肠绒毛与感染后变短变钝的绒毛" loading="lazy"></div>
+<p>诺如病毒是一类能感染人体，引起急性胃肠炎的病毒，典型表现是突然恶心、呕吐、腹泻，有的人还会腹痛、发热。</p>
+<h3>为什么会拉肚子？</h3>
+<p>我们吃下去的食物经过消化道，会被分解成身体可以利用的小分子。而小肠内壁有许多细小绒毛，如同密密排布的“牙刷毛”，能够增加吸收面积，帮助身体吸收营养和水分。</p>
+<p>感染诺如病毒后，这些绒毛可能暂时变短、变钝，而肠道中一些帮助消化食物的，消化能力也会随之下降。</p>
+<p>这导致食物没有被充分消化、吸收，更多水分没有进入身体被利用，反而被留在了肠道之中，最后随着粪便排出，于是大便变稀，到最后自然也就像水一样了。</p>
+<p>所以腹泻的背后，其实是肠道受到病毒影响，暂时无法像平时一样处理食物和吸收水分。</p>
+<p>有些人在感染后，喝牛奶反倒让腹胀、腹泻更严重了——就是因为他们的肠道暂时处理不好牛奶中的乳糖，这时候我们可以选择无乳糖牛奶。但这种情况并非人人都会发生。</p>
+<h3>那我为什么还恶心、呕吐呢？</h3>
+<p>我们消化道包含的除了肠道，还有胃。正常情况下，胃会把吃进去的食物逐渐送入小肠，这个过程叫作“胃排空”。</p>
+<p>但在病毒侵袭之下，消化道的运转受到影响，胃排空变慢——食物和液体在胃里停留得更久，也更容易出现胃不舒服、恶心，甚至呕吐。</p>
+<p>目前，诺如病毒引起吐泻的具体机制仍在研究中。同样是感染诺如病毒，有些人的症状可能偏向呕吐，有些人则明显腹泻更多，而有些人两种症状都有。</p>
+<p class="key">小编在此提醒：腹泻并不是“把病毒拉干净”，而呕吐也不代表“把病毒吐出去了就恢复了”。反复呕吐、腹泻，会不断丢失水和电解质，导致人脱水，及时补液是痊愈的重要环节。</p>
+<h2>二、为什么还会发烧，是不是病得很严重？</h2>
+<div class="wx-fig" data-label="配图 2"><img src="https://images.unsplash.com/photo-1594790628624-9e563bea851d?w=1600&q=80&auto=format&fit=crop" alt="手里拿着电子体温计" loading="lazy"></div>
+<p class="q">“可是我发烧了啊，这不是很严重吗？”</p>
+<p>先别把“发烧”和“严重”画等号——发烧是身体应对感染时的自发反应。</p>
+<p>当免疫系统发现病毒，会尝试释放一些传递信号的物质，调动免疫功能，杀死病毒，而其中部分信号会影响大脑调节体温的“温控中心”，从而使体温升高。</p>
+<p>身体会减少散热，增加产热，让体温升高，所以有的人明明在发烧，但却觉得冷，打寒战——这是身体正在努力达到新温度。</p>
+<p>约40%～50%的诺如病毒胃肠炎患者会出现发热，通常以中低热，体温在37.3～39.0℃为主，持续时间很少超过24小时。</p>
+<p>相比于用体温来判断病情是否严重，我们更需要注意的是这三点：喝得进水吗？尿量减少了吗？精神状态怎么样？</p>
+<p>喝得进水，要看喝下去有没有吐出来，要是一喝就吐，反复尝试，仍然无法喝下，则身体流失的水分难以被补回来。</p>
+<p>尿量和平时比较，身体缺水时，肾脏会尽量减少水分排出，尿量可能减少，且尿色变深。</p>
+<p>至于精神状态，生病后没力气，想休息很常见，但要是异常嗜睡，反应迟钝，甚至意识模糊，难以唤醒，则反应异常，需即刻就医。</p>
+<p>所以，对于吐泻的人，即便体温不高，如果一直吐，一直拉，又喝不进去水，这就可能会出现脱水，脱水才是需要重点防范的信号。</p>
+<p>而有的人虽然发热，但能喝水，能正常排尿，反应清楚，整体状态可能相对稳定，可以继续持续观察体温、吐泻次数和补液情况。</p>
+<h2>三、又吐又拉，眼下最该做什么？</h2>
+<div class="wx-fig" data-label="配图 3"><img src="https://images.unsplash.com/photo-1624948465027-6f9b51067557?w=1600&q=80&auto=format&fit=crop" alt="手里端着一杯水" loading="lazy"></div>
+<p class="q">所以我现在应该做什么？</p>
+<p>先看身体状态，如果已经出现意识模糊、难以唤醒、晕厥，或突然剧烈腹痛，应立即急诊就医。如果反复呕吐，连小口液体都留不住，或尿量明显减少，也需及时就医。</p>
+<p>但如果人清醒、能够喝进去，可以先从少量多次补液做起。</p>
+<h3>1.补液并不只是“多喝水”。</h3>
+<p>呕吐、腹泻时，身体流失的不只有水，还有钠、钾等电解质。这些物质参与维持身体的水分平衡，以及神经、肌肉的正常工作。</p>
+<p>在多次呕吐、腹泻后，只喝白开水，难以充分补回流失的电解质，这时候，我们应该选择的是口服补液盐。</p>
+<p>口服补液盐是按比例配好的葡萄糖和电解质，冲水后饮用。葡萄糖在这里一是增加甜味，方便入口，二是让肠道吸收葡萄糖的时候，也带动钠的吸收，钠被吸收了，水分也就被随之吸收了，</p>
+<p>它可以帮助腹泻的人的肠道，通过这种方式吸收一些水分。</p>
+<h3>2.不想去、没力气去药店，运动饮料、电解质水和可乐能代替吗？</h3>
+<p>我们也可以在家自制口服补液盐，自行调配时，务必确保用量准确，用精确的茶匙计量，切记盐宁可放少，也不可放多。如果放多，反而会适得其反，让患者流失更多水分。最安全的做法是在正规药店购买口服补液盐Ⅲ，按照说明书使用。</p>
+<div class="recipe"><p class="lbl">自制口服补液盐配方：</p><div class="rrow"><div class="ri"><svg viewBox="0 0 48 56" aria-hidden="true"><path d="M10 6h28l-3 44a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12.2 22c4 2.5 8 2.5 12 0s8-2.5 11.6 0l-2.2 28a1.5 1.5 0 0 1-1.5 1.5H16a1.5 1.5 0 0 1-1.5-1.5z" fill="currentColor" opacity=".22"/></svg><span>1升水</span></div><span class="plus" aria-hidden="true">+</span><div class="ri"><svg viewBox="0 0 56 56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M8 30l14-7 14 7-14 7z"/><path d="M8 30v12l14 7V37"/><path d="M36 30v12l-14 7"/><path d="M20 15l12-6 12 6-12 6z"/><path d="M20 15v10M44 15v10l-8 4"/></g></svg><span>30毫升砂糖</span></div><span class="plus" aria-hidden="true">+</span><div class="ri"><svg viewBox="0 0 48 56" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M14 18h20v30a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z"/><path d="M14 18c0-8 4.5-12 10-12s10 4 10 12"/></g><g fill="currentColor"><circle cx="20" cy="11" r="1.4"/><circle cx="24" cy="9" r="1.4"/><circle cx="28" cy="11" r="1.4"/></g></svg><span>2.5毫升盐</span></div></div></div>
+<p>将水、糖和盐混合，饮用前务必确保所有糖和盐都已溶解，且补充液清澈透明。可以在饮料中加入两茶匙浓缩果汁或糖浆调味。</p>
+<p>运动饮料和普通“电解质水”，虽然也含有糖和电解质，但配比却不一定适合吐泻时的补液需求，不能直接当作替代品。也不推荐饮用果汁、汽水等含糖较高的饮料，过多糖也会加重腹泻。</p>
+<p>补液的主要任务是预防和纠正脱水，喝了以后依然吐泻不止，但无持续呕吐或症状加重，则为正常情况。最终患者会靠自身免疫力，自行逐渐转好。</p>
+<h3>3.一喝就恶心，怎么办？</h3>
+<p>胃还不舒服时，别勉强自己一次喝得太多。建议先喝一小口，或使用小勺子慢慢服用，少量多次补充，之后再逐渐增加。</p>
+<p>如果患者是孩子，国家卫健委的建议是：每次喂10～20毫升，间隔5～10分钟再喂一次，根据孩子的耐受情况调整。</p>
+<p>要是喝进去后不久吐出，属于正常情况，不需要立刻大量补灌，推荐稍作停顿，待恶心缓解后，更少、更慢地尝试喝下。</p>
+<p>如经过反复尝试，仍然一喝就吐，请不要在家硬撑，这说明依赖口服补液的方法走不通，请立刻就医评估——医生会帮助你恢复健康。</p>
+<h2>四、还能吃东西吗？怎么吃才能更舒服？</h2>
+<div class="wx-fig" data-label="配图 4"><img src="https://images.unsplash.com/photo-1621658537360-dfcb008fe19f?w=1600&q=80&auto=format&fit=crop" alt="一碗粥" loading="lazy"></div>
+<p>恶心明显，先少量多次补液，无需强迫进食。等到能吃得下，就从小份、清淡的食物开始。</p>
+<table class="tbl"><thead><tr><th scope="col">食物类别</th><th scope="col">可以准备什么</th></tr></thead><tbody><tr><th scope="row">粥类</th><td>大米粥、小米粥、南瓜粥、胡萝卜粥、瘦肉粥</td></tr><tr><th scope="row">米饭、面食</th><td>软米饭、清汤面、鸡蛋面、面片汤、馒头、花卷、原味吐司</td></tr><tr><th scope="row">蛋类</th><td>蒸蛋羹、蛋花汤、煮鸡蛋</td></tr><tr><th scope="row">鱼肉、禽肉和瘦肉</th><td>清蒸鱼、鱼片面、鸡肉粥、鸡肉末、瘦肉末蒸蛋、冬瓜肉片汤</td></tr><tr><th scope="row">豆制品</th><td>蒸嫩豆腐、豆腐蛋羹、豆腐肉末汤</td></tr><tr><th scope="row">蔬菜、薯类</th><td>蒸南瓜、土豆泥、胡萝卜泥、煮冬瓜、丝瓜汤、切碎煮软的青菜</td></tr><tr><th scope="row">水果</th><td>熟香蕉、去皮苹果、蒸苹果</td></tr><tr><th scope="row">简单加餐</th><td>原味吐司、小馒头、少量苏打饼干</td></tr><tr><th scope="row">奶类</th><td>平时喝后没有不适的牛奶，喝普通奶后腹胀、腹泻者，无乳糖奶</td></tr></tbody></table>
+<h2>五、要不要吃药?哪些药可以吃，哪些不可以？</h2>
+<div class="wx-fig" data-label="配图 5"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&q=80&auto=format&fit=crop" alt="铝塑板包装的药片" loading="lazy"></div>
+<p>目前没有针对诺如病毒的特效抗病毒药物，治疗主要是补液和缓解症状，患者通常在几天之内便会自行好转。</p>
+<h3>1.拉得难受，能不能吃止泻药?</h3>
+<p>常见的药物有蒙脱石散和洛哌丁胺等抑制肠道蠕动的药物。</p>
+<table class="tbl c3"><thead><tr><th scope="col">药物</th><th scope="col">主要作用</th><th scope="col">使用时要注意什么</th></tr></thead><tbody><tr><th scope="row">蒙脱石散</th><td>覆盖、保护消化道黏膜，可用于缓解腹泻</td><td>按具体产品说明使用；与其他口服药物的服用间隔，不能代替补液</td></tr><tr><th scope="row">洛哌丁胺等抑制肠道蠕动的药物</th><td>减慢肠道运动，减少排便次数</td><td>不适合所有腹泻患者，尤其伴有发热、血便时，不要自行使用，儿童也不要自行服用</td></tr></tbody></table>
+<h3>2.发烧了可以吃退烧药吗？</h3>
+<p>退烧药主要用于缓解发热带来的不适，如果只是轻度发热，能够休息、饮水，也没有明显难受，就先观察。要是发热伴随明显头痛、肌肉酸痛，影响休息，可以选择适用的对乙酰氨基酚（扑热息痛）或布洛芬等药物。</p>
+<h3>3.受不了一直吐，可以直接去输液吗？</h3>
+<p>能喝进去补液，则通常可以先口服，如果无法口服或出现重度脱水，则需要静脉补液治疗。</p>
+<h2>六、会传给家人吗？怎样避免全家轮流中招？</h2>
+<div class="wx-fig" data-label="配图 6"><img src="https://images.unsplash.com/photo-1591610160225-861405867ba3?w=1600&q=80&auto=format&fit=crop" alt="用肥皂洗手" loading="lazy"></div>
+<p>诺如病毒容易在家庭、学校中人传人，家里有老人和孩子的，需要注意把洗手、污染物处理和日常照护等做到位，有效减少家人感染的可能性。</p>
+<h3>1.认真洗手</h3>
+<p>病毒可以通过患者的粪便、呕吐物传播，因此饭前、便后、准备食物前，以及照顾患者，与患者接触和清理污染物过后，需用肥皂或洗手液洗手至少20秒。酒精湿巾、免洗洗手液无法替代。</p>
+<h3>2.好好隔离并休息</h3>
+<p>患者尽量在家休息，暂停聚餐、串门，也不要为别人准备食物。水杯、餐具、毛巾分开使用，避免与婴幼儿和老人密切接触。</p>
+<h3>3.及时清理吐泻污染</h3>
+<p>呕吐物、粪便污染的地方要及时清理。</p>
+<p>清理时先让他人避开，戴好口罩和手套，使用含氯消毒液处理被污染的表面。不要直接拿拖把来回拖，也不要冲得四处飞溅。</p>
+<p>清理结束后，丢掉手套和口罩，认真洗手。</p>
+<p>被吐泻物弄脏的衣服和床单也不要抖动，先处理污物，再清洗消毒。没被污染的房间和衣物，保持正常清洁即可。</p>
+<h3>4.与患者共用卫生间，清理重点位置</h3>
+<p>家里只有一个卫生间，重点清洁马桶、冲水按钮、水龙头和门把手。有可见污物时，及时处理并消毒。</p>
+<p>按照我国诊疗方案，患者通常应隔离至呕吐、腹泻等症状完全消失后72小时，方可恢复返校、上班等活动。</p>
+<div class="src"><p class="lbl">参考资料</p><ul><li>1. 国家卫生健康委、国家中医药局．<a href="https://www.nhc.gov.cn/ylyjs/gzdt/202509/e81f3191191746cfae078f56fb542556.shtml" target="_blank" rel="noopener">《诺如病毒胃肠炎诊疗方案（2025年版）》</a>．2025年。</li><li>2. 中国疾病预防控制中心．<a href="https://www.chinacdc.cn/jkkp/crb/bcr/202607/t20260731_1838524.html" target="_blank" rel="noopener">《为什么诺如病毒肠炎也称作“冬季呕吐疾病”》</a>．2026年。</li><li>3. 国家卫生健康委．<a href="https://www.nhc.gov.cn/xcs/c100122/202606/ea9d8d2493f84cbf802f6ebb6155fa55.shtml" target="_blank" rel="noopener">《2026年6月17日新闻发布会文字实录》</a>．2026年。</li><li>4. 国家疾控局综合司．<a href="https://app.www.gov.cn/govdata/gov/202412/01/522296/article.html" target="_blank" rel="noopener">《学校等重点场所诺如病毒感染防控消毒技术指南》</a>．2024年。</li><li>5. 中国疾病预防控制中心．<a href="https://wjw.fj.gov.cn/jdhy/hygq/202502/t20250224_6767026.htm" target="_blank" rel="noopener">《诺如防护指南【家庭消毒篇】》</a>．福建省卫生健康委转载，2025年。</li><li>6. 美国国立糖尿病、消化和肾脏疾病研究所（NIDDK）．<a href="https://www.niddk.nih.gov/health-information/digestive-diseases/viral-gastroenteritis/eating-diet-nutrition" target="_blank" rel="noopener">《病毒性胃肠炎期间的饮食与营养》</a>（英文）。</li><li>7. 英国国家医疗服务体系（NHS）．<a href="https://www.nhs.uk/conditions/norovirus/" target="_blank" rel="noopener">《诺如病毒》</a>（英文）。</li></ul></div>
+        <div class="wx-end"><span>分享</span><span>收藏</span><span>赞</span><span>推荐</span></div>
+      </article>
+      <a class="next" href="#fatty-liver"><span>下一篇 · 大众科普</span><b>体检查出脂肪肝，该怎么办？</b></a>
+      <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
+    </div>
   </div>
-
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ do-anxious-owners-have-anxious-dogs ============ -->
@@ -349,9 +700,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/dog-on-sofa.jpg" alt="A dog resting on a sofa in a living room, watching something out of frame"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">Do Anxious Owners Have Anxious Dogs?</h1>
-      <div class="by">林怡馨 · 25 August 2026 · 8 min read</div>
+      <div class="by">林怡馨 · 8 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -359,11 +710,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key"><b>Short answer:</b> A 2019 study found that dogs and their owners had synchronized long-term hair cortisol levels: owners with higher hair cortisol tended to have dogs with higher hair cortisol. The pattern appeared in samples reflecting both summer and winter. However, the study was observational, involved only 58 female-owner-and-dog pairs from two herding breeds, and did not prove that an owner’s stress directly caused stress in the dog. The most useful message for owners is not “never feel stressed.” It is that the emotional climate, routines and interactions shared with a dog may form part of the dog’s long-term environment.</div><p class="lead">Have you ever returned from a difficult day and noticed that your dog seems unable to settle? Perhaps it follows you from room to room, scans the window, reacts more strongly on a walk or becomes unusually quiet.</p><p>It is tempting to say that the dog has “absorbed” your stress. Dogs are highly attentive to human movement, voice, routines and behaviour, so the idea feels plausible. But does scientific evidence support it?</p><p>Researchers at Linköping University investigated this question by measuring cortisol in the hair of dogs and their owners. Their findings suggest that long-term stress physiology can be synchronized within a dog-owner pair. The study is fascinating—but it is also easy to overinterpret.</p><p>Here is what the researchers found, what they did not prove and what dog owners can reasonably take from the results.</p><h2>What does it mean when a dog’s stress is “synchronized” with its owner’s?</h2><p>In this study, <b>synchronization meant that owner and dog hair cortisol concentrations were statistically associated</b>. When the owner’s hair cortisol was higher, the dog’s hair cortisol also tended to be higher.</p><p>It did not mean that the values were identical, that both experienced the same emotions at the same moment or that every stressful day immediately changed the dog’s hormones.</p><p>The researchers measured cortisol in hair rather than in a single blood or saliva sample. Cortisol becomes incorporated into growing hair, so hair cortisol concentration can provide a retrospective measure of cortisol exposure over a longer period. The proximal three centimetres of hair were analysed in this study.</p><p>This makes hair cortisol useful for studying long-term patterns. It does not function as a detailed diary. It cannot tell researchers exactly which event raised cortisol, whether the individual felt afraid, or whether a particular day was stressful.</p><figure class="fig"><img src="images/bench-notebook.jpg" alt="A notebook and pen on a laboratory bench beside sample containers" loading="lazy"/><figcaption>Hair cortisol is a record of months, not of a bad afternoon. That is what makes it useful here, and what stops it from explaining any single day.</figcaption></figure><h2>How was the study conducted?</h2><p>The study included <b>58 dog-owner pairs in Sweden</b>:</p><ul class="bul"><li>33 Shetland sheepdogs;</li><li>25 border collies;</li><li>31 female dogs and 27 male dogs;</li><li>26 pet dogs and 32 dogs that actively trained and competed in agility, obedience or both;</li><li>female owners only, with a mean age of approximately 46 years.</li></ul><p>Hair was collected from the dogs and owners on two occasions: September or October 2017 and February 2018. These samples were intended to reflect cortisol exposure during preceding summer and winter months.</p><p>The owners also completed personality questionnaires about themselves and their dogs. Researchers collected information about routines, housing and training. Forty-four dogs wore an activity collar for one week so that the team could examine whether general physical activity might explain the hair cortisol results.</p><p>This design allowed the researchers to compare owner and dog cortisol across two seasons while considering breed, dog sex and lifestyle.</p><h2>The main finding: owner and dog hair cortisol moved together</h2><p>Owner hair cortisol was significantly associated with dog hair cortisol in both seasonal samples. In simple terms, <b>dogs living with owners who had higher long-term cortisol also tended to show higher long-term cortisol themselves</b>.</p><p>The relationship appeared in pet dogs as well as dogs involved in competition. During the summer sampling period, the association was stronger among competing dogs and among female dogs, although synchronization was still observed across the tested groups.</p><p>The authors suggested that dogs may mirror the long-term stress levels of their owners. That interpretation was supported by another part of the analysis: owner personality measures were associated with dog hair cortisol, while the measured dog personality traits had relatively little association with it.</p><p>However, “the dog mirrors the owner” remains an interpretation—not proof of a one-way biological transfer.</p><h2>Physical activity did not explain the pattern—but that result has limits</h2><p>The researchers found no significant relationship between dog hair cortisol and either:</p><ul class="bul"><li>the amount of medium-to-high activity recorded by the activity collar; or</li><li>the number of weekly training sessions reported by owners.</li></ul><p>This matters because cortisol can be influenced by physical activity. The results suggest that the owner-dog association was not simply a case of active owners having active dogs with higher cortisol.</p><p>Still, the activity monitoring covered only one week and involved 44 dogs, while hair cortisol represented a much longer period. The study therefore cannot rule out every possible contribution from exercise, competition or shared daily activity.</p><p>Owners should not conclude that exercise is irrelevant to stress or that more exercise will solve chronic stress. This study did not test either claim.</p><h2>Owner personality was related to dog cortisol—but not in a simple way</h2><p>The owners completed a Big Five personality questionnaire. Three traits—neuroticism, conscientiousness and openness—were statistically associated with dog hair cortisol in parts of the analysis.</p><p>These results are easy to turn into misleading headlines. For example, a reader might assume that a more neurotic owner automatically produces a more stressed dog. That is not what the data showed. Higher owner neuroticism was actually associated with <b>lower</b> dog hair cortisol in both seasonal samples. Conscientiousness and openness were positively associated with dog hair cortisol only in the winter sample, and several associations differed according to the dog’s sex.</p><p>Personality traits are broad questionnaire measures, not diagnoses or moral judgments. The study did not establish which daily behaviours connected these traits with dog cortisol. The results should therefore generate further questions, not personality-based rules for choosing or raising a dog.</p><h2>Season, breed, sex and lifestyle also mattered</h2><p>The dogs had higher hair cortisol in the winter sample than in the summer sample. This seasonal increase was more pronounced among pet dogs than competition dogs. Shetland sheepdogs had higher winter hair cortisol than border collies, and female dogs had higher cortisol than male dogs when both sampling periods were considered together.</p><p>These findings show why cortisol should not be interpreted in isolation. A hormone measurement can vary with biological and environmental factors that do not have one obvious emotional meaning.</p><p>Higher cortisol is not automatically proof that a dog is frightened, unhappy or poorly cared for. Cortisol helps the body respond to demands and is part of normal physiology. Context, behaviour, health and change over time all matter.</p><h2>Does this prove that a stressed owner makes their dog stressed?</h2><p>No. The study found an association, not a demonstrated causal pathway.</p><p>Several explanations remain possible:</p><ul class="bul"><li>Dogs may respond to their owner’s behaviour, voice, movement, attention or routines.</li><li>Owners and dogs may react to the same household events or environmental pressures.</li><li>The dog’s behaviour may influence the owner’s stress as well as the reverse.</li><li>Lifestyle or relationship characteristics not fully measured in the study may affect both individuals.</li><li>Some combination of these processes may operate over time.</li></ul><p>The researchers argued that owner-to-dog influence was more likely because owner characteristics were more strongly associated with dog cortisol than dog personality was. That is a reasonable interpretation of the results, but the study was not designed to establish direction with certainty.</p><p>It also did not test whether dogs smell human cortisol, whether a dog consciously understands that an owner is stressed or which human signals might produce the synchronization.</p><figure class="fig"><img src="images/owner-reunion.jpg" alt="A person crouching to greet a dog, the dog leaning into them" loading="lazy"/><figcaption>An association runs in both directions until an experiment separates them. The dog watching you all evening is also part of your evening.</figcaption></figure><h2>What should dog owners do with this information?</h2><p>The study did not test a training or stress-reduction programme. The following points are therefore <b>practical implications</b>, not interventions proven by this experiment.</p><h3>1. Do not turn the finding into guilt</h3><p>Every owner experiences stress. A difficult week at work does not mean that you have harmed your dog, and trying to appear perfectly calm at all times is unrealistic.</p><p>Instead, think about what your dog repeatedly experiences: sudden schedule changes, tense handling, hurried walks, frequent conflict, poor sleep or an unpredictable household may matter more than one bad mood.</p><h3>2. Make daily life understandable</h3><p>Predictable meals, walks, rest periods and household rules can reduce uncertainty. Predictability does not require a rigid minute-by-minute schedule. It means the dog has reliable patterns and receives clear information about what happens next.</p><h3>3. Check your body before a difficult situation</h3><p>Before passing another dog, greeting a visitor or entering a busy environment, notice your grip on the leash, breathing, posture and speed. Owners often shorten a leash or hold their breath in anticipation of a reaction. The dog may respond to those changes even if no words are spoken.</p><p>Use the space available, soften the leash where safety allows and follow a rehearsed plan. The goal is not to pretend that you feel nothing. It is to make your actions consistent and useful.</p><h3>4. Watch the dog rather than guessing from your own feelings</h3><p>If you are anxious, you may expect the dog to be anxious too. Look for observable evidence: body tension, orientation, willingness to eat, ability to sniff, response to familiar cues and recovery time.</p><p>This prevents two opposite mistakes—overlooking a dog that is struggling and assuming a relaxed dog must be stressed because the owner is stressed.</p><h3>5. Protect recovery after demanding events</h3><p>A busy trip, competition, visitor or difficult walk may be followed by a simpler day with sleep, sniffing and familiar activities. Recovery is not the same as isolation. It means reducing unnecessary demands and allowing the dog’s arousal to return to its usual level.</p><h3>6. Address stress on both sides of the leash</h3><p>If walks repeatedly leave both dog and owner distressed, the solution may involve environmental management, reward-based behaviour support and help for the owner—not simply more obedience practice for the dog.</p><p>A veterinarian can rule out pain or illness that may change behaviour. A qualified reward-based behaviour professional can help design safer exposure and handling plans. Owners may also benefit from practical support that makes care easier and more sustainable.</p><h2>Important limitations of the research</h2><p>This study provides evidence of long-term physiological synchronization, but its scope was narrow:</p><ul class="bul"><li>Only 58 pairs participated.</li><li>Every owner was female.</li><li>Only border collies and Shetland sheepdogs were included.</li><li>Participants were recruited through social media and personal contacts rather than randomly selected.</li><li>The design was observational, so it could not establish causation or direction.</li><li>Owners rated both their own and their dog’s personality, creating a risk of questionnaire bias.</li><li>Activity was monitored for one week in a subset of dogs, while hair cortisol reflected a longer period.</li><li>Hair cortisol measures cumulative hormone exposure; it does not identify a specific emotion or stressful event.</li></ul><p>The results should not be automatically generalized to male owners, children, other breeds, multi-person households or dogs living under very different conditions.</p><h2>Frequently asked questions</h2><h3>Can dogs sense when their owners are stressed?</h3><p>Dogs can respond to many human cues, but this study did not identify which cues were involved. It showed that long-term hair cortisol levels were associated within the tested dog-owner pairs.</p><h3>Do dogs absorb their owner’s cortisol?</h3><p>The study did not show cortisol physically transferring from a person to a dog. “Synchronization” describes a statistical relationship between their measurements, not hormone absorption.</p><h3>Does having anxiety make someone a bad dog owner?</h3><p>No. The study did not assess whether owners were good or bad, and its personality results were complex. Higher neuroticism scores were associated with lower dog hair cortisol in this sample.</p><h3>Can exercise break the stress connection?</h3><p>The study found no significant association between dog hair cortisol and measured activity or reported training frequency. It did not test exercise as a treatment, so the result cannot tell owners how much exercise an individual dog needs.</p><h3>Are female dogs more affected by owner stress?</h3><p>The owner-dog cortisol association was stronger in female dogs during the summer sampling period, and female dogs had higher hair cortisol overall. One modest study is not enough to create a general rule for all female dogs.</p><h3>Can a dog also affect the owner’s stress?</h3><p>Possibly. Dogs and owners share routines and influence each other’s behaviour. This study’s authors proposed that dogs were mainly mirroring owners, but the observational design could not prove that influence moved in only one direction.</p><h2>The most important thing to remember</h2><p>Your dog does not need you to be emotionally perfect. It needs a life in which your signals, routines and responses are safe enough to understand.</p><p>The study’s most useful message is not “your stress is hurting your dog.” It is that a dog-owner relationship is a shared biological and social environment. Looking after that environment—through predictable care, calmer handling, adequate recovery and appropriate professional help—may support both members of the pair.</p><div class="src"><p class="lbl">The study</p><p>Sundman, A.-S., Van Poucke, E., Svensson Holm, A.-C., Faresjö, Å., Theodorsson, E., Jensen, P. &amp; Roth, L. S. V. (2019). <b>Long-term stress levels are synchronized in dogs and their owners.</b> Scientific Reports, 9, 7391. <a href="https://doi.org/10.1038/s41598-019-43851-x" target="_blank" rel="noopener noreferrer">Read the paper →</a></p></div><p class="note"><i>Scientific note: Hair cortisol is a long-term physiological measure, not a diagnosis of anxiety or a direct reading of emotional experience. Behavioural changes should be interpreted in context, and sudden or serious changes warrant veterinary assessment.</i></p>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/do-anxious-owners-have-anxious-dogs" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#how-to-build-confidence-in-a-sensitive-dog"><span>下一篇 · 文献科普</span><b lang="en">How Do You Build Confidence in a Sensitive or Timid Dog?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ how-to-build-confidence-in-a-sensitive-dog ============ -->
@@ -372,9 +722,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/dog-waiting-alone.jpg" alt="A dog lying alone on a floor indoors, head down, looking out across the room"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">How Do You Build Confidence in a Sensitive or Timid Dog?</h1>
-      <div class="by">林怡馨 · 25 August 2026 · 10 min read</div>
+      <div class="by">林怡馨 · 10 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -382,11 +732,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key"><b>Short answer:</b> A sensitive or timid dog does not become confident by being exhausted, ignored, overprotected or forced to “face its fears.” Confidence grows when the dog feels physically well, can predict what will happen, has safe ways to move away, succeeds at manageable challenges and is rewarded for voluntary, useful behaviour. Owners should combine appropriate exercise, enrichment, rest, gradual exposure and reward-based training—and seek veterinary help when behaviour changes suddenly or seriously affects daily life.</div><p class="lead">If your dog hides when visitors arrive, startles at small noises or watches unfamiliar people from behind your legs, you may feel that every decision matters. Should you comfort the dog or ignore it? Avoid difficult situations or encourage it to be brave? Provide more exercise or more rest?</p><p>The answer is rarely “always” or “never.” The following ten principles turn the idea of “building confidence” into practical decisions an owner can use at home and outside.</p><h2>1. “Sensitive” describes a pattern—it does not diagnose the problem</h2><p>Researchers have developed a questionnaire to investigate a possible canine personality trait called sensory processing sensitivity. That makes sensitivity a real subject of study, but <b>“highly sensitive dog” is not a veterinary diagnosis</b>.</p><p>Dogs that look sensitive may be experiencing very different things:</p><ul class="bul"><li>fear of unfamiliar people, dogs, sounds or places;</li><li>high arousal or frustration;</li><li>discomfort with handling;</li><li>separation-related distress;</li><li>pain, itching or another medical condition;</li><li>limited experience with a particular environment;</li><li>a learned expectation that something unpleasant will happen.</li></ul><p>Do not begin with “What kind of dog is this?” Begin with “What happened, in what context, and what did my dog do?” A dog that avoids hands but happily explores a new park needs a different plan from a dog that is constantly vigilant everywhere.</p><p><b>What to do:</b> Keep a simple record for one or two weeks. Note the trigger, distance, time, location, first body-language change, full reaction and recovery time. Patterns are more useful than labels.</p><h2>2. Learn the early signs—before barking, fleeing or biting</h2><p>Sensitive dogs often communicate discomfort before producing the behaviour people notice. Possible early signs include:</p><ul class="bul"><li>turning the head or moving weight away;</li><li>lowering the body or trying to make it smaller;</li><li>becoming suddenly still or tense;</li><li>scanning the surroundings and struggling to disengage;</li><li>ears held back or a lowered tail;</li><li>moving behind the owner or toward an exit;</li><li>refusing food the dog normally likes;</li><li>panting without heat or recent exercise;</li><li>trembling, increased salivation, growling or barking.</li></ul><p>No individual signal proves anxiety. A dog may lick its lips because food is nearby, yawn because it is tired or pant because it is hot. Ear and tail positions also differ among breeds. Look for several changes together and compare them with your dog’s normal behaviour.</p><p><b>What to do:</b> Respond to the first small signal. Turn away, cross the street, ask a visitor to stop approaching or give the dog access to a quiet room. Waiting for an explosion makes both safety and learning harder.</p><h2>3. Repeated licking or chewing is not automatically “self-soothing”</h2><p>Some dogs lick themselves more during stress, but frequent or focused licking can also be caused by allergies, skin disease, infection, gastrointestinal discomfort, neurological disease or pain. Reviews of canine behavioural medicine warn that repetitive licking and chewing may be incorrectly labelled as compulsive or emotional before medical causes are investigated.</p><p>The same caution applies to a sudden increase in hiding, irritability, noise sensitivity, touch sensitivity or aggression. Pain can lower a dog’s tolerance and make previously manageable situations difficult.</p><p><b>What to do:</b> Arrange a veterinary assessment if the behaviour is new, persistent, directed repeatedly at one body area or accompanied by skin changes, altered movement, sleep disruption, appetite changes or unusual sensitivity to touch. Take photos or videos and note when the behaviour occurs.</p><h2>4. Separation anxiety is a specific problem, not a personality type</h2><p>A dog that follows its owner around the house is not necessarily suffering from separation anxiety. Veterinary guidance notes that close attachment behaviour alone does not place a dog at greater risk.</p><p>Separation-related distress occurs specifically when the dog is alone or separated from an attachment figure. Signs may include vocalising, pacing, salivating, house-soiling, destroying doors or windows, refusing food and being unable to settle. Many affected dogs show their strongest signs within the first 15–30 minutes after departure, although patterns vary.</p><p><b>What to do:</b> Record the dog after you leave. Video helps distinguish separation distress from boredom, reactions to outdoor sounds, confinement anxiety and incomplete house-training. If the dog panics, consult a veterinarian or qualified behaviour professional; repeatedly leaving it to “cry it out” is not a confidence exercise.</p><h2>5. Meet exercise needs—but do not try to exhaust fear out of the dog</h2><p>Physical activity supports health and can provide exploration, play and social contact. But “a tired dog is a good dog” is incomplete advice. Exercise does not directly treat fear, and repeatedly using intense running, chasing or high-arousal play may leave some dogs more activated rather than settled. Exercise also needs to match age, breed, fitness, health and temperature.</p><p>For a timid dog, a busy one-hour walk can contain far more stress than a shorter walk in a quiet place. Distance covered is not the only measure of a worthwhile outing.</p><p><b>What to do:</b> Choose activity the dog can enjoy without being repeatedly overwhelmed. Combine physical movement with opportunities to sniff and explore. If the dog returns home frantic, remains vigilant for hours or reacts more strongly later in the day, reduce the intensity or complexity and observe whether recovery improves.</p><figure class="fig"><img src="images/dog-dozing.jpg" alt="A dog asleep on a floor with its head resting on its front legs" loading="lazy"/><figcaption>Rest is not the gap between activities. For a dog that spends its day monitoring the room, it is the activity.</figcaption></figure><h2>6. Mental enrichment and rest matter as much as movement</h2><p>Confidence is not built only outdoors. Environmental enrichment gives dogs appropriate ways to forage, sniff, chew, explore, play and solve problems. Research suggests enrichment can increase relaxation and reduce some alert or stress-related behaviours, although the best activity depends on the individual dog.</p><p>More stimulation is not always better. A timid dog also needs genuine downtime. Constant visitors, daycare, dog parks, training classes and puzzle toys can create a life with no opportunity to switch off.</p><p><b>What to do:</b> Offer a small menu rather than a packed schedule:</p><ul class="bul"><li>scatter part of a meal in grass or on a snuffle mat;</li><li>allow unhurried sniffing on a quiet walk;</li><li>provide a safe chew suitable for the dog;</li><li>teach an easy search game;</li><li>offer gentle play if the dog initiates it;</li><li>protect a quiet sleeping area from children, visitors and other pets.</li></ul><p>Watch what happens afterward. An activity is useful enrichment only if it benefits that dog rather than causing frustration or prolonged arousal.</p><h2>7. Provide predictability without controlling every moment</h2><p>Predictable routines can help a dog understand when eating, walking, resting and interaction are likely to occur. Clear household rules also reduce confusion. This does not mean the owner must become a dominant “leader,” nor that the dog should have no choices.</p><p>Confidence grows through controllable, successful experiences. A dog that can choose whether to approach a new object, enter a room or interact with a visitor receives useful information: its actions affect what happens next.</p><p><b>What to do:</b> Keep the basic routine understandable, then build small choices into it. Let the dog choose between two resting places, select a direction on a safe sniffing walk or decline optional petting. Teach practical cues such as going to a mat, turning away with you and touching your hand. These give the dog familiar actions to use when uncertain.</p><h2>8. Avoid both overprotection and forced exposure</h2><p>Avoiding every unfamiliar sight forever can reduce opportunities to learn. But placing a frightened dog close to a trigger and preventing escape—often called flooding—can intensify fear and create dangerous attempts to flee or defend itself.</p><p>The useful middle ground is <b>managed, gradual exposure</b>. Present the trigger at a level where the dog notices it but can still eat, sniff, move normally and turn away. Pair the experience with something the dog values, and stop before the dog becomes overwhelmed.</p><p><b>What to do:</b> If your dog fears strangers, do not ask strangers to reach toward it. Begin where the dog can observe without freezing or barking. Each time a person appears, provide a valued reward. Increase difficulty only after repeated relaxed responses. The goal may be calm neutrality, not physical contact.</p><p>Avoiding an uncontrolled encounter today is not “giving in.” Management prevents frightening rehearsals while you create better learning opportunities.</p><h2>9. Reduce pressure and reward the behaviour you want</h2><p>Shouting, leash corrections, forced handling and intimidation may stop movement temporarily without changing the underlying fear. Research comparing companion-dog training methods has associated aversive-based training with more stress-related behaviour and a more negative cognitive bias.</p><p>Reward-based training does not mean allowing dangerous behaviour. It means arranging the environment, preventing avoidable failures and teaching an alternative the dog can perform.</p><p><b>What to do:</b> Break the skill into a step the dog can succeed at:</p><ul class="bul"><li>reward looking at a trigger and then looking away;</li><li>teach a cheerful turn-and-leave cue before it is needed;</li><li>reward four paws on the floor rather than punishing jumping;</li><li>teach the dog to rest on a mat while visitors remain at a distance;</li><li>practise collar touches or grooming in tiny, voluntary steps.</li></ul><p>Use food, toys, play, sniffing or access to space according to what the dog values at that moment. If it cannot take a normally desirable reward, the task may be too difficult.</p><h2>10. Calm support is different from anxious overattention</h2><p>Owners are sometimes told to ignore a frightened dog because comfort will “reward the fear.” Fear is an emotional state, not a trick deliberately performed for payment. There is no good reason to withhold safe social support from a dog that seeks it.</p><p>That does not mean restraining the dog, repeatedly touching it when it is trying to move away or becoming loud and frantic. Some dogs want contact; others need space. During fireworks, owner-report research found that feeding or playing after loud bangs was associated with improvement, while counterconditioning was among the most successful reported training approaches.</p><p><b>What to do:</b> Stay calm and available. If the dog approaches for contact, offer gentle touch if its body remains loose and it can leave. If it hides, make the hiding place safe instead of pulling it out. Pair manageable triggers with food or play when the dog is able to engage. Your attention should make the situation clearer, not more intense.</p><figure class="poster"><img src="images/build-confidence-summary.webp" alt="A summary card titled How to build confidence in a sensitive dog. Think: safety plus choice plus small wins. Eight numbered points: notice early signs, create distance, keep life predictable, add calm enrichment, protect real rest, train in tiny steps, let your dog choose, track what changes. A red banner reads: don’t force, don’t punish, don’t try to exhaust fear away. A footer advises seeing a vet if behaviour changes suddenly or the dog cannot cope with daily life." loading="lazy"/><figcaption>The ten sections above, on one card. Save it, print it, put it on the fridge.</figcaption></figure><h2>A simple weekly confidence plan for owners</h2><p>Confidence work should be small enough to repeat. A practical week might contain:</p><table class="tbl"><thead><tr><th scope="col">Area</th><th scope="col">Owner action</th></tr></thead><tbody><tr><th scope="row">Health</th><td>Record any physical or behavioural change and arrange veterinary care when indicated.</td></tr><tr><th scope="row">Exercise</th><td>Provide suitable movement without exhausting or repeatedly overwhelming the dog.</td></tr><tr><th scope="row">Enrichment</th><td>Offer sniffing, foraging, chewing, play or simple problem-solving according to preference.</td></tr><tr><th scope="row">Rest</th><td>Protect predictable, uninterrupted downtime.</td></tr><tr><th scope="row">Training</th><td>Practise one easy skill in brief reward-based sessions.</td></tr><tr><th scope="row">Exposure</th><td>Arrange one or two controlled experiences below the dog’s reaction threshold.</td></tr><tr><th scope="row">Choice</th><td>Give the dog safe opportunities to approach, pause or move away.</td></tr><tr><th scope="row">Tracking</th><td>Note reaction intensity, required distance and recovery time.</td></tr></tbody></table><p>Do not increase every category at once. If the dog has had a difficult outing, the next useful step may be recovery rather than another challenge.</p><h2>How do you know whether confidence is improving?</h2><p>Do not measure progress only by the absence of barking. A dog may become silent while still frightened. Look for functional changes:</p><ul class="bul"><li>the dog notices a trigger without becoming rigid;</li><li>it can turn away or respond to a familiar cue;</li><li>it accepts food and explores the environment;</li><li>it chooses to approach and can also leave;</li><li>reactions become less frequent, shorter or less intense;</li><li>recovery becomes faster;</li><li>normal resting and sleeping return sooner after a difficult event.</li></ul><p>Progress is rarely linear. Compare weeks rather than individual moments.</p><h2>When does a sensitive dog need professional help?</h2><p>Contact a veterinarian when behaviour changes suddenly, self-licking or chewing persists, touch seems painful, sleep or appetite changes, or an older dog develops new fearfulness. Seek qualified behavioural help when the dog has bitten, is at risk of escaping, cannot manage ordinary daily activities, panics when left alone or continues to deteriorate despite careful management.</p><p>For severe anxiety, veterinary medication may be part of humane treatment. Medication does not replace learning, but it may reduce distress enough for a dog to benefit from behaviour modification.</p><h2>The most important thing to remember</h2><p>A timid dog does not need a harder owner or a life with no boundaries. It needs an owner who can tell the difference between protection and avoidance, between exercise and overstimulation, and between quiet behaviour and genuine relaxation.</p><p>Confidence is not the ability to tolerate anything. It is the growing ability to explore, make safe choices, use learned skills and recover when the world becomes difficult.</p><div class="src"><p class="lbl">Research sources</p><ul><li>Braem, M. et al. (2017). <a href="https://doi.org/10.1371/journal.pone.0177616" target="_blank" rel="noopener noreferrer">Development of the “Highly Sensitive Dog” questionnaire to evaluate the personality dimension “Sensory Processing Sensitivity” in dogs.</a> PLOS ONE, 12(5), e0177616.</li><li>Mills, D. S. et al. (2020). <a href="https://doi.org/10.3390/ani10020318" target="_blank" rel="noopener noreferrer">Pain and problem behavior in cats and dogs.</a> Animals, 10(2), 318.</li><li>Camps, T. et al. (2019). <a href="https://doi.org/10.3390/ani9121133" target="_blank" rel="noopener noreferrer">A review of medical conditions and behavioral problems in dogs and cats.</a> Animals, 9(12), 1133.</li><li>Hunt, R. L., Whiteside, H. &amp; Prankel, S. (2022). <a href="https://doi.org/10.3390/ani12020141" target="_blank" rel="noopener noreferrer">Effects of environmental enrichment on dog behaviour: Pilot study.</a> Animals, 12(2), 141.</li><li>Riemer, S. et al. (2021). <a href="https://doi.org/10.3390/ani11010158" target="_blank" rel="noopener noreferrer">A review on mitigating fear and aggression in dogs and cats in a veterinary setting.</a> Animals, 11(1), 158.</li><li>Vieira de Castro, A. C. et al. (2020). <a href="https://doi.org/10.1371/journal.pone.0225023" target="_blank" rel="noopener noreferrer">Does training method matter? Evidence for the negative impact of aversive-based methods on companion dog welfare.</a> PLOS ONE, 15(12), e0225023.</li><li>Riemer, S. (2020). <a href="https://doi.org/10.1016/j.jveb.2020.04.005" target="_blank" rel="noopener noreferrer">Effectiveness of treatments for firework fears in dogs.</a> Journal of Veterinary Behavior, 37, 61–70.</li><li>Sargisson, R. J. (2014). <a href="https://doi.org/10.2147/VMRR.S60424" target="_blank" rel="noopener noreferrer">Canine separation anxiety: Strategies for treatment and management.</a> Veterinary Medicine: Research and Reports, 5, 143–151.</li></ul></div><p class="note"><i>Scientific note: Behaviour must be interpreted in context. “Sensitive” and “timid” are descriptions, not diagnoses, and the advice above cannot identify the cause of an individual dog’s behaviour. Medical problems, serious fear, aggression and separation distress require individualized assessment.</i></p>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/how-to-build-confidence-in-a-sensitive-dog" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#do-dogs-really-enjoy-training"><span>下一篇 · 文献科普</span><b lang="en">Do Dogs Really Enjoy Training?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ do-dogs-really-enjoy-training ============ -->
@@ -395,9 +744,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/owner-at-home.png" alt="A person sitting on a sofa at home with a small dog beside them"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">Do Dogs Really Enjoy Training?</h1>
-      <div class="by">林怡馨 · 25 August 2026 · 8 min read</div>
+      <div class="by">林怡馨 · 8 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -405,11 +754,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key"><b>Short answer:</b> Many dogs can enjoy training when it is predictable, voluntary and reward-based. But training is not automatically fun just because a dog obeys. A dog is more likely to have a positive experience when it understands how to succeed, earns something it genuinely values and can pause or move away without being forced.</div><p class="lead">Picture the moment you pick up a treat pouch. Your dog trots over, watches your hands and starts offering every trick it knows. That certainly looks like enthusiasm. Now picture a dog that turns its head away, moves slowly or stops taking food while its person repeats a cue more loudly. Both dogs are being “trained,” but they are probably not having the same experience.</p><p>Popular advice often reduces dog training to a few simple rules: be the leader, use hand movements, ignore mistakes, stay calm, teach patience and reward obedience. Each idea contains a useful question—but several need an important scientific correction.</p><table class="tbl"><thead><tr><th scope="col">Popular claim</th><th scope="col">A more accurate version</th></tr></thead><tbody><tr><th scope="row">Dogs need an “alpha” who sets rules.</th><td>Dogs benefit from clear, predictable learning conditions; they do not need humans to act like pack leaders.</td></tr><tr><th scope="row">Dogs understand actions better than words.</th><td>Dogs can learn verbal and visual cues, and many respond very well to gestures. A hand signal is not the same as physically moving the dog.</td></tr><tr><th scope="row">Ignoring a mistake works better than scolding.</th><td>Avoiding intimidation is wise, but ignoring only changes some attention-seeking behaviours. Dogs still need to be shown and rewarded for an alternative.</td></tr><tr><th scope="row">A calm person makes a dog learn faster.</th><td>Dogs are sensitive to human stress and emotion. Calm, predictable handling may make learning easier, but it does not guarantee faster learning.</td></tr><tr><th scope="row">Teaching “wait” creates self-control.</th><td>Dogs can learn to delay a reward, but the skill develops gradually and may not transfer automatically to every situation.</td></tr><tr><th scope="row">Training creates love.</th><td>Kind, cooperative training can support a good relationship. Obedience by itself is not proof of love or trust.</td></tr></tbody></table><h2>How can we tell whether a dog enjoys training?</h2><p>Scientists cannot ask a dog to rate a lesson. Instead, they combine behavioural and physiological clues. A dog that repeatedly chooses to return, approaches readily, takes rewards gently and shows loose, engaged body language is giving encouraging signals. Offering behaviours before being prompted may also show that the dog expects an opportunity to earn a reward.</p><p>No single sign proves enjoyment. A wagging tail can accompany excitement, uncertainty or tension, and eating food does not always mean a dog feels relaxed. Look at the whole dog and the pattern across the session.</p><p>Possible signs that the task has become too difficult or unpleasant include moving away, freezing, crouching, repeated lip-licking or yawning outside their usual context, a tucked tail, refusal of normally valued food, frantic grabbing or a sudden loss of attention. When these appear, make the task easier, change the environment or stop. Continuing until the dog “gives in” tests endurance, not understanding.</p><h2>Do dogs need strict rules and an “alpha”?</h2><p>Dogs do benefit from consistency, but not because they are waiting for a human “alpha.” The pack-leader story is a poor model for the relationship between a pet dog and a person. In training, consistency simply makes consequences easier to predict.</p><p>If “down” sometimes means lie on the floor, sometimes means get off the sofa and sometimes means stop jumping, the sound is unreliable. If jumping earns attention on Monday but punishment on Tuesday, the outcome is equally unclear. A more useful rule is: use one distinct cue for one behaviour, arrange situations so the dog can succeed, and reward the response you want.</p><p>Predictability should not mean rigidity. Puppies, older dogs and dogs in distracting or frightening environments may need different expectations. A dog that cannot respond may be confused, afraid, in pain or simply insufficiently trained for that setting—not stubborn or dominant.</p><h2>Do dogs understand gestures better than words?</h2><p>Dogs are skilled readers of human bodies. Research with trained dogs shows that they can respond to both spoken and gestural signals, and in some tasks gestures are especially effective. That does not mean every dog naturally understands every hand movement. A cue becomes meaningful through learning, and an unintentional lean, glance or hand movement can become part of the signal without the trainer noticing.</p><p>Most importantly, “add an action” should mean <b>use a clear visual cue</b>, not <b>place the dog’s body into position</b>. Lifting a paw to teach “shake” or pressing a dog’s back to teach “wait” may cause discomfort, resistance or confusion. It also fails to tell the dog which voluntary action earned the reward.</p><p>A clearer approach is to capture a behaviour the dog offers naturally, lure it without force, or reward small steps toward the final behaviour. Mark the correct moment with a consistent word such as “yes” or a click, then deliver the reward. Add the spoken or hand cue once the dog is reliably performing the action.</p><figure class="fig"><img src="images/dog-with-toys.jpg" alt="A dog lying on the floor surrounded by soft toys" loading="lazy"/><figcaption>A reward is whatever this particular dog wants right now. It is not a fixed list, and it is not always food.</figcaption></figure><h2>Is ignoring a mistake better than scolding?</h2><p>Scolding can interrupt behaviour, but interruption is not the same as teaching. Studies comparing training methods have linked aversive-based training with more stress-related behaviour, higher post-training cortisol and a more pessimistic response in a cognitive-bias test. Reward-based training is therefore the safer default for welfare.</p><p>Ignoring, however, is not a universal lesson. It can reduce a behaviour that is maintained by your attention—for example, some forms of jumping or pawing—if attention disappears every time and an appropriate alternative is rewarded. It will not reliably teach a dog what to do instead. Nor should fear, pain or distress be treated as misbehaviour that must be ignored.</p><p>For ordinary mistakes, give useful information: prevent another repetition, lower the difficulty, cue or wait for an achievable alternative, and reward it. If a dog jumps during greetings, for example, create enough distance for four paws to remain on the floor and reward that position. The lesson becomes “this works,” rather than “sometimes my person disappears.”</p><h2>Does a calmer trainer help a dog learn?</h2><p>Probably—but the evidence is more nuanced than “stay calm and your dog will learn faster.” Dogs can discriminate human stress odour, studies have reported emotional contagion between people and dogs, and long-term cortisol levels can covary within dog–owner pairs. These findings show that human state can become part of a dog’s environment. They do not prove that a soft voice alone accelerates every lesson.</p><p>In practice, calmness matters because frustration changes timing, posture, leash pressure and the number of repeated cues. If you feel irritation rising, pause. Give the dog water, movement or rest, and return later with an easier step. A short successful session teaches more than a long contest.</p><h2>Does teaching “wait” improve self-control?</h2><p>Dogs can delay an immediate reward to obtain a better one, although performance differs among individuals and across tasks. Research also warns against treating “self-control” as one single, stable ability: a dog’s result on one inhibitory-control test may not predict its result on another.</p><p>That makes “wait” a useful practical skill, but not a personality transplant. Teach it in tiny increments. Ask for a fraction of a second, mark success and release the dog to the reward. Increase only one difficulty at a time: duration, distance or distraction. Frequent failure means the step is too hard.</p><p>The release cue matters as much as the wait cue. It tells the dog exactly when the pause ends, making the exercise predictable. Do not repeatedly display food while preventing access until the dog becomes frantic; that rehearses frustration rather than calm waiting.</p><h2>Can training strengthen the dog–human bond?</h2><p>It can, depending on how training is conducted. Reward-based sessions create repeated opportunities for clear communication and positive outcomes. An observational study in dog-training classes found fewer stress-related behaviours and more attention toward owners in dogs trained with positive reinforcement than in dogs trained with negative reinforcement. Because the study was observational, it shows an association rather than proving that the method alone caused every difference.</p><p>Obedience is still not a love meter. A dog may respond because a behaviour has a strong reinforcement history, because food is available or because avoiding a consequence has become important. Trust is better reflected in the wider relationship: whether the dog approaches voluntarily, feels safe enough to explore, seeks support when worried and can disengage without punishment.</p><p>Praise, touch and play can all be rewards—but only when that particular dog wants them at that moment. A dog that turns away from petting is not being rewarded by more petting. Good training asks, in effect, “What did my dog find valuable?” and lets the answer shape the next repetition.</p><figure class="fig"><img src="images/dog-dozing.jpg" alt="A dog asleep on a floor with its head resting on its front legs" loading="lazy"/><figcaption>Stopping while the dog is still interested is a training decision, not a failure to finish the lesson.</figcaption></figure><h2>How can you make training more enjoyable for your dog?</h2><ol><li><b>Use rewards your dog actually wants.</b> Food, toys, sniffing, access to a doorway and social interaction can all reinforce behaviour.</li><li><b>Keep sessions short.</b> Stop while the dog is still interested; several one-minute sessions can be more useful than one long lesson.</li><li><b>Give each cue once.</b> If the dog does not respond, change the difficulty instead of increasing the volume.</li><li><b>Reward the precise behaviour you want.</b> Good timing makes the lesson easier to understand.</li><li><b>Avoid physical force and intimidation.</b> Use capturing, luring and shaping to produce voluntary movement.</li><li><b>Build difficulty gradually.</b> Change duration, distance or distraction one at a time.</li><li><b>Treat body language as feedback.</b> Slowing down, moving away or refusing rewards means the plan needs adjustment.</li><li><b>Allow a real pause.</b> Choice and predictability are part of a positive training experience.</li></ol><h2>So, do dogs enjoy being trained?</h2><p>Many dogs appear to enjoy well-designed training because it offers rewards, mental activity and a structured way to interact with a person. But the method matters more than the label. A session based on force, fear or repeated frustration does not become enjoyable merely because it is called training.</p><p>The most useful question is therefore not “Did my dog obey?” It is: <b>Did my dog understand, participate willingly and finish ready to engage again?</b> Training is at its best when learning and welfare point in the same direction.</p><div class="src"><p class="lbl">Research sources</p><ul><li>Vieira de Castro, A. C. et al. (2020). <a href="https://doi.org/10.1371/journal.pone.0225023" target="_blank" rel="noopener noreferrer">Does training method matter? Evidence for the negative impact of aversive-based methods on companion dog welfare.</a> PLOS ONE 15(12), e0225023.</li><li>Deldalle, S. &amp; Gaunet, F. (2014). <a href="https://doi.org/10.1016/j.jveb.2013.11.004" target="_blank" rel="noopener noreferrer">Effects of 2 training methods on stress-related behaviors of the dog and on the dog–owner relationship.</a> Journal of Veterinary Behavior 9(2), 58–65.</li><li>Scandurra, A. et al. (2017). <a href="https://doi.org/10.1016/j.applanim.2017.02.003" target="_blank" rel="noopener noreferrer">Effectiveness of verbal and gestural signals and familiarity with signal-senders on the performance of working dogs.</a> Applied Animal Behaviour Science 191, 78–83.</li><li>Sundman, A.-S. et al. (2019). <a href="https://doi.org/10.1038/s41598-019-43851-x" target="_blank" rel="noopener noreferrer">Long-term stress levels are synchronized in dogs and their owners.</a> Scientific Reports 9, 7391.</li><li>Brucks, D. et al. (2017). <a href="https://doi.org/10.3389/fpsyg.2017.00849" target="_blank" rel="noopener noreferrer">Measures of dogs’ inhibitory control abilities do not correlate across tasks.</a> Frontiers in Psychology 8, 849.</li><li>Brucks, D. et al. (2017). <a href="https://doi.org/10.1038/srep42459" target="_blank" rel="noopener noreferrer">Reward type and behavioural patterns predict dogs’ success in a delay of gratification paradigm.</a> Scientific Reports 7, 42459.</li><li>American Veterinary Society of Animal Behavior. (2021). <a href="https://avsab.org/resources/position-statements/" target="_blank" rel="noopener noreferrer">Humane Dog Training Position Statement.</a> AVSAB.</li></ul></div><p class="note"><i>Scientific note: Behavioural signs must be interpreted in context, and the studies above differ in design, sample and setting. They support welfare-conscious training principles; they do not show that every dog enjoys every reward-based session or that one method fits every behavioural problem. Sudden behaviour change, aggression, severe fear or suspected pain warrants advice from a veterinarian or a suitably qualified behaviour professional.</i></p>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/do-dogs-really-enjoy-training" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#what-kind-of-strangers-do-dogs-prefer"><span>下一篇 · 文献科普</span><b lang="en">What Kind of Strangers Do Dogs Prefer?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ what-kind-of-strangers-do-dogs-prefer ============ -->
@@ -418,9 +766,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/lab-walking.jpg" alt="A yellow Labrador walking along a pavement beside a person’s legs"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">What Kind of Strangers Do Dogs Prefer?</h1>
-      <div class="by">林怡馨 · 25 August 2026 · 9 min read</div>
+      <div class="by">林怡馨 · 9 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -428,11 +776,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key">Dogs may respond more readily to strangers who first walk alongside their owners and talk with them. In a study of 32 pet dogs, dogs stayed closer to an unfamiliar person, matched that person’s movement more closely and were more likely to adjust their speed after watching the person walk and talk with their owner. However, the study measured behavioural coordination—not whether the dogs emotionally “liked” the stranger.</div><p class="lead">Imagine meeting a dog for the first time. Your instinct may be to approach, speak to the dog or offer your hand. But what if the better introduction begins with the person at the other end of the relationship—the dog’s owner?</p><p>Dogs pay close attention to how their owners behave around other people. A relaxed conversation, a shared walk and two people moving comfortably together may give a dog useful information before the stranger ever interacts with the dog directly.</p><p>A 2024 study tested whether observing this kind of interaction changes how dogs respond to an unfamiliar person. The results suggest that, from a dog’s perspective, a stranger who fits comfortably into the owner’s movements may become easier to approach and follow.</p><h2>What does it mean for a dog to “prefer” a stranger?</h2><p>This study did not ask dogs to choose between two strangers. It also did not measure affection, friendliness or emotional attachment.</p><p>Instead, the researchers measured <i>behavioural synchronization</i>: the tendency of one individual to coordinate its location, speed or timing with another. During a walk, this can mean staying close to someone, moving at a similar speed or changing pace shortly after that person does.</p><p>Dogs commonly synchronize their movement with their owners. Previous research suggests that they do not usually coordinate as closely with unfamiliar people. The new study asked whether a stranger’s behaviour toward the owner could change that response.</p><p>Throughout this article, “prefer” therefore means that the dogs were more willing to remain near the unfamiliar person and coordinate their movement with them. It should not be read as proof that the dogs felt affection for that person.</p><h2>How did researchers test dogs’ responses to strangers?</h2><p>The study included 32 pet dogs of different breeds and crossbreeds. The dogs were between one and 11 years old and weighed at least seven kilograms. All were healthy, comfortable around unfamiliar people and accustomed to being walked off leash.</p><table class="tbl"><thead><tr><th scope="col">Study detail</th><th scope="col">What the researchers did</th></tr></thead><tbody><tr><th scope="row">Dogs</th><td>32 pet dogs of different breeds and crossbreeds</td></tr><tr><th scope="row">First group</th><td>16 dogs watched a stranger walk closely and talk with their owner</td></tr><tr><th scope="row">Second group</th><td>16 dogs saw the stranger remain distant and silent toward their owner</td></tr><tr><th scope="row">Observation period</th><td>15 minutes in an open outdoor area</td></tr><tr><th scope="row">Movement test</th><td>A 45-second straight-line test with standing, slow walking and fast walking</td></tr><tr><th scope="row">Main measures</th><td>Distance, time spent nearby, speed matching, speed adjustment and gaze</td></tr></tbody></table><p>The dogs were divided into two groups of 16. During the first 15-minute phase, every dog was free to move around an open outdoor area while its owner and the unfamiliar experimenter followed one of two patterns.</p><p>In the <b>Sync and Talk</b> group, the stranger stayed within about one metre of the owner, adjusted their walking speed to the owner’s and talked with the owner.</p><p>In the <b>Desync and No Talk</b> group, the stranger remained away from the owner and did not speak to them. The owner and stranger moved separately.</p><figure class="fig"><img src="images/two-people-talking.jpg" alt="Two people sitting across a table from each other, talking" loading="lazy"/><figcaption>The dog is not part of this conversation, and that is the experiment: the only thing on offer is a chance to watch two people get along.</figcaption></figure><p>In both groups, the stranger did not look directly at or communicate with the dog. The owner also avoided talking to or looking at the dog. This meant the dog’s main source of information was the interaction—or lack of interaction—between the two people.</p><p>After 15 minutes, the owner stood still in a place visible to the dog. The stranger called the dog to a standard starting position and then completed a 45-second straight-line test. In a randomized order, the stranger stood still for 15 seconds, walked slowly for 15 seconds and walked quickly for 15 seconds. The stranger remained silent and did not look at the dog.</p><p>GPS devices and video recordings allowed the researchers to compare how the two groups responded.</p><h2>Which stranger did the dogs coordinate with more closely?</h2><p>Dogs coordinated their movement more closely with the stranger who had first walked and talked with their owner.</p><p>The effect appeared in three parts of behavioural synchronization:</p><ul class="bul"><li><b>Location:</b> Dogs in the Sync and Talk group stayed closer to the stranger and spent more time near them.</li><li><b>Activity:</b> At the beginning of the straight-line test, their speed was more similar to the stranger’s speed.</li><li><b>Timing:</b> Ten of the 16 dogs in the Sync and Talk group adjusted their speed after the stranger changed pace, compared with three of the 16 dogs in the Desync and No Talk group.</li></ul><p>These differences appeared even though the stranger had not spoken to, looked directly at or walked with the dogs during the first phase. The dogs had only observed how the stranger behaved with their owner.</p><p>The effect was not identical across every measure. The two groups did not differ in how long the dogs spent looking at the stranger during the straight-line test. They also did not differ in the total time spent moving at a similar speed. The clearest speed-matching difference appeared at the beginning of the test rather than throughout the full 45 seconds.</p><p>This is why the findings are best described as increased behavioural coordination, not a complete change in how the dogs felt about the stranger.</p><h2>Why did some dogs look less at the stranger?</h2><p>During the initial 15-minute observation period, dogs in the Sync and Talk group actually spent less time looking at the stranger than dogs in the Desync and No Talk group.</p><p>At first, this may sound like less interest. The researchers offer another possibility: a stranger who is already walking and talking comfortably with the owner may seem more predictable and may require less monitoring.</p><p>Dogs often use their owners as a source of social information in uncertain situations. If the owner accepts someone into their immediate space and moves naturally with them, the dog may not need to watch that person as closely. A stranger who stays separate from the owner may remain more uncertain and therefore receive more visual attention.</p><p>This interpretation is plausible, but it was not directly tested. Looking longer at a stranger does not necessarily mean liking them more; it may sometimes mean the dog is gathering information or monitoring a possible concern.</p><h2>Did the dogs prefer the stranger over their owner?</h2><p>No. The stranger’s earlier interaction with the owner increased the dogs’ coordination with the stranger, but it did not weaken the owner’s attraction.</p><p>During the 45-second walking test, 16 of the 32 dogs went to their owners. The number of dogs that did so—and how quickly they went—did not differ between the two experimental groups.</p><figure class="fig"><img src="images/owner-reunion.jpg" alt="A person crouching down on a path with their arms around a dog" loading="lazy"/><figcaption>A stranger who moves well with the owner becomes easier to follow. The owner stays the destination.</figcaption></figure><p>Across the test, dogs also tended to move away from the stranger and in the direction of their owners. The researchers describe this as an “owner attractor” effect. Observing a coordinated interaction may have made the stranger easier to follow temporarily, but the owner remained the dogs’ main social reference.</p><h2>How might dogs judge an unfamiliar person?</h2><p>The study offers two possible explanations, and both may operate at the same time.</p><p>One is <b>social referencing</b>. Dogs may use their owner’s behaviour as information about how to respond to something unfamiliar. By seeing the owner walk closely and converse with a stranger, the dog may treat that person as more familiar or predictable. The researchers describe this possibility as a transfer of familiarity: in simple terms, “my owner is comfortable with this person, so this person may be safer to coordinate with.”</p><p>The second possibility is <b>motor contagion</b>. Observing two people move together may make the dog more likely to reproduce the same pattern and align its own movement with the stranger later. This would be a relatively automatic response to perceived movement rather than a conscious judgment of the person’s character.</p><p>The experiment cannot show which explanation is correct. It also cannot separate the effect of walking in sync from the effect of talking, because the stranger did both in the same condition.</p><h2>How should a stranger approach a dog for the first time?</h2><p>The study suggests that the first useful interaction may be with the owner rather than the dog.</p><p>For example, a new pet sitter, veterinary professional or family visitor could spend time walking alongside and talking with the owner before expecting the dog to follow or interact with them. During this period, the stranger can allow the dog to observe without demanding contact. That closely resembles the successful condition in the experiment, in which the stranger initially ignored the dog.</p><figure class="fig"><img src="images/vet-clinic.jpg" alt="A veterinarian holding a dog steady on an examination table" loading="lazy"/><figcaption>The people a dog has to accept fastest are often the ones with the least time to spend on it.</figcaption></figure><p>This does not guarantee that a dog will accept the person, and the study did not identify one universal introduction method. It suggests that dogs use the owner-stranger interaction as social information and that a calm period of shared movement may support a smoother introduction.</p><p>It also challenges the idea that more attention is always better. Immediately calling, touching or leaning toward an unfamiliar dog may not be necessary. Sometimes, allowing the dog to watch two humans interact is itself part of the introduction.</p><h2>Does this approach work for fearful or reactive dogs?</h2><p>The study cannot answer that question.</p><p>All participating dogs were comfortable with unfamiliar people, accustomed to being off leash and reported to have no behavioural problems. Dogs that were fearful, aggressive or reactive toward strangers were not tested.</p><p>The authors suggest that a similar approach might eventually be useful in behaviour-modification work, with an unfamiliar person walking alongside the owner without interacting with the dog. But that is a proposed future application, not a result demonstrated by this experiment.</p><p>For a dog that reacts strongly to unfamiliar people, the distance, environment, intensity of exposure and dog’s ability to move away all matter. This study should not be treated as a do-it-yourself desensitization protocol. Introductions should remain within the individual dog’s comfort level and may require guidance from a qualified behaviour professional.</p><h2>What are the study’s limitations?</h2><p>The experiment involved only 32 dogs, with 16 in each condition, and used the same unfamiliar experimenter for every dog. The dogs weighed at least seven kilograms and were already comfortable around strangers and off-leash walking, so the results may not apply to smaller dogs, shelter dogs or dogs with fear and reactivity.</p><p>Each dog experienced only one of the two conditions. Individual differences between the groups may therefore have influenced the results, even though the groups were balanced by sex.</p><p>The stranger walked in sync with the owner <i>and</i> talked with the owner. The study cannot tell whether movement, conversation or their combination caused the later change in the dogs’ behaviour. The stranger also called each dog to the starting point before the walking test, which introduced a brief direct interaction.</p><p>During the first phase, dogs in the Sync and Talk group were also closer to the stranger on average than dogs in the other group. The researchers noted that the average distance still exceeded ten metres in both groups and brought every dog to the same starting distance for the walking test. Even so, the earlier difference in distance cannot be separated completely from the rest of the experimental condition.</p><p>Finally, some components of the effect weakened quickly. The strongest difference in speed matching occurred at the beginning of the test, and dogs increasingly moved toward their owners as the test continued.</p><h2>So, what kind of strangers do dogs prefer?</h2><p>This study suggests that dogs respond more readily to strangers who first behave in a coordinated, socially connected way with their owners. A person who walks alongside the owner, matches their pace and talks with them may become easier for the dog to approach and move with than someone who remains separate and silent.</p><p>But dogs are not simply copying their owner’s list of approved people. They are reading movement, distance, attention and social context. The stranger who makes the best first impression may be the one who does not rush to impress the dog at all—and instead gives the dog time to watch a calm interaction unfold.</p><div class="src"><p class="lbl">The study</p><p>Lamontagne, A., Legou, T., Bedossa, T. &amp; Gaunet, F. (2024). <b>Walk with me? Part 2: Dogs synchronize with an unfamiliar person who first synchronized with their owner.</b> Applied Animal Behaviour Science 275, 106271 (2024). <a href="https://doi.org/10.1016/j.applanim.2024.106271" target="_blank" rel="noopener noreferrer">Read the paper →</a></p></div>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/what-kind-of-strangers-do-dogs-prefer" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#do-male-and-female-dogs-bond-differently"><span>下一篇 · 文献科普</span><b lang="en">Do Male and Female Dogs Bond Differently With Their Owners?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ do-male-and-female-dogs-bond-differently ============ -->
@@ -441,9 +788,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/labrador-portrait.jpg" alt="Head-and-shoulders portrait of a black Labrador Retriever against a dark background"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">Do Male and Female Dogs Bond Differently With Their Owners?</h1>
-      <div class="by">林怡馨 · 25 August 2026 · 7 min read</div>
+      <div class="by">林怡馨 · 7 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -451,11 +798,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key">A study of 51 Labrador Retrievers found that male and female dogs expressed attachment differently in some situations. Female dogs were generally more sociable and showed more owner-seeking behaviour when left with a stranger. However, the study does not show that female dogs love their owners more, and the findings cannot be assumed to apply to every dog.</div><p class="lead">Imagine walking into an unfamiliar room with your dog. There are a few toys, two chairs and a person your dog has never met. After several minutes, you quietly leave.</p><p>What happens next? Your dog might stay near the stranger, wait by the door, explore the room or try to find you. When you return, your dog may rush over—or respond in a much quieter way.</p><p>These small choices can reveal something important about attachment: the lasting bond that makes a familiar person a source of security. Researchers have long known that dogs can form attachment relationships with their owners. A study published in <i>Animal Cognition</i> asked a more specific question: do male and female dogs express that bond differently?</p><h2>How do dogs show attachment to their owners?</h2><p>In attachment research, an owner can act as both a “safe haven” and a “secure base.” A dog may return to its owner when something feels threatening, while the owner’s presence may also give the dog enough confidence to explore an unfamiliar place.</p><p>Attachment can therefore appear in several kinds of behaviour. A dog may seek proximity or physical contact, follow its owner, show distress during an unexpected separation, focus on the door after the owner leaves or greet the owner when they return.</p><p>No single action proves how strongly a dog is attached. Researchers instead look at how a group of related behaviours changes when the owner is present, absent or replaced by an unfamiliar person.</p><figure class="fig"><img src="images/dog-waiting-alone.jpg" alt="A dog lying under a piece of furniture indoors, head down, looking out across the floor" loading="lazy"/><figcaption>Door-directed behaviour is one of the signs researchers count. On its own it does not tell you how strong a bond is.</figcaption></figure><h2>How did researchers test dog-owner attachment?</h2><p>The researchers observed 51 pet Labrador Retrievers: 29 males and 22 females. The dogs ranged from seven months to 13 years old. All were healthy, lived with human families and had no known separation-related problems.</p><table class="tbl"><thead><tr><th scope="col">Study detail</th><th scope="col">What the researchers did</th></tr></thead><tbody><tr><th scope="row">Dogs</th><td>51 pet Labrador Retrievers: 29 males and 22 females</td></tr><tr><th scope="row">Age range</th><td>Seven months to 13 years</td></tr><tr><th scope="row">Test</th><td>A dog-adapted Strange Situation Test</td></tr><tr><th scope="row">Test length</th><td>Seven three-minute episodes, lasting 21 minutes in total</td></tr><tr><th scope="row">People present</th><td>The dog’s owner and the same unfamiliar man</td></tr><tr><th scope="row">Behaviours observed</th><td>Social contact, proximity seeking, door-directed behaviour, exploration, play and passivity</td></tr></tbody></table><p>The experiment used the Strange Situation Test, which was originally developed to study attachment between human infants and caregivers and was later adapted for dogs.</p><p>Each dog moved through seven short situations in an unfamiliar room. At different points, the dog was with its owner, with both the owner and a male stranger, with the stranger only, completely alone and reunited with its owner. The researchers recorded the dog’s behaviour throughout the 21-minute test.</p><p>The central question was not simply how often the dogs performed each behaviour. It was how their behaviour changed depending on who was in the room.</p><h2>What did the study find about female and male dogs?</h2><p>The study found three main differences—and several important similarities.</p><h3>Female Labradors were more socially engaged</h3><p>Across the parts of the test that involved people, female Labradors showed a stronger general tendency to seek social contact and interaction than males.</p><p>This difference was not limited to interactions with their owners. It therefore does not prove that the female dogs had a stronger owner-specific bond. It suggests a broader difference in sociability within this particular group of Labradors.</p><h3>Female dogs showed more owner-seeking behaviour during separation</h3><p>The clearest attachment-related difference appeared when the owner left and the dog remained with the stranger.</p><p>Female dogs showed more behaviour associated with trying to find or reunite with the missing person. Their responses changed more noticeably between situations in which the owner was present and those in which only the stranger remained. Male dogs’ responses varied less across these situations.</p><p>Another pattern of behaviour may have reflected distress. During the first separation, after the owner left the dog with the stranger, female dogs scored higher than males. The authors suggest that the male dogs may have coped better with that first stressful separation.</p><p>This interpretation remains tentative. The behaviour pattern included exploration and individual play as well as aimless movement. Exploration and play can indicate several different things, including attempts to cope with stress, so they cannot automatically be treated as signs of distress.</p><figure class="fig"><img src="images/owner-reunion.jpg" alt="A person kneeling to hug a large dog, the dog’s head over their shoulder" loading="lazy"/><figcaption>The reunion episode. What the researchers measured was not the greeting itself but how much it differed from the rest of the test.</figcaption></figure><h3>Male and female dogs behaved similarly in some situations</h3><p>The researchers found no detectable sex difference when the dogs first entered the unfamiliar room with their owners. They also found no sex difference when the dogs were left completely alone.</p><p>The owner’s sex did not significantly affect the dogs’ responses. Age influenced some behaviour patterns, but the study was not designed primarily to investigate age differences.</p><h2>Does this mean female dogs love their owners more?</h2><p>No. This study measured observable behaviour, not the private emotional experience that people call love. A dog that seeks less physical contact or displays fewer obvious signs of distress may still have a strong attachment to its owner.</p><p>The findings are better understood as possible differences in <i>how</i> attachment is expressed. In this sample, female Labradors were generally more social and showed stronger owner-seeking behaviour during separation. Male Labradors appeared less socially motivated and showed less behavioural change when the owner was absent.</p><p>The researchers noted that this pattern resembles some reported differences in adult human romantic attachment. On average, women have been described as showing more closeness-seeking and attachment anxiety, while men show more self-reliance and avoidance. Comparable sex differences are generally not found in the attachment behaviour of human infants.</p><p>This comparison is a hypothesis, not proof that a dog-owner relationship works like a human romance. The authors’ broader suggestion is that the dog-owner bond may be more complex than the familiar comparison between a human infant and a parent. It may also share certain features with adult friendship and companionship.</p><h2>Can a dog’s sex predict how attached they will be?</h2><p>Not reliably. These findings describe average differences within one relatively small group. They should not be used to predict the personality or attachment style of an individual dog.</p><p>The study included only 51 Labrador Retrievers, so the results may not apply to other breeds. The number of neutered males and spayed females was small and uneven, which meant the researchers could not determine whether sex hormones influenced the observed behaviour. The same male stranger participated in every test, and a different stranger could potentially have affected the dogs’ responses.</p><p>The dogs also had no known separation-related problems. The results therefore cannot be used to identify or explain separation anxiety.</p><p>Breed, age, health, previous experiences, personality and the dog’s relationship with a particular person may all be more useful than sex when trying to understand an individual dog.</p><h2>What should dog owners take from the research?</h2><p>The most useful lesson is to look for patterns in your own dog rather than relying on a stereotype about male or female dogs.</p><p>Notice what changes when you leave and return. Does your dog follow you, watch the door, seek contact, stop exploring or recover quickly once you are back? Consider the situation around the behaviour as well. Waiting by a door in an unfamiliar laboratory does not necessarily mean the same thing as waiting by the door at home.</p><p>No single behaviour tells the whole story. The contrast between situations—and changes from a dog’s usual behaviour—can be more informative than whether the dog performs one particular action.</p><figure class="fig"><img src="images/lab-walking.jpg" alt="A yellow Labrador walking along a pavement beside a person’s legs" loading="lazy"/><figcaption>Averages describe a group of 51 dogs. They do not describe yours.</figcaption></figure><p>When a dog waits by the door in an unfamiliar place, the behaviour may look simple. Behind it can be a relationship shaped by security, experience and the dog’s individual way of seeking connection. Male and female dogs may sometimes express that connection differently, but difference is not a measure of who loves more.</p><div class="src"><p class="lbl">The study</p><p>D’Aniello, B., Scandurra, A., Pinelli, C., Marinelli, L. &amp; Mongillo, P. <b>Is this love? Sex differences in dog-owner attachment behavior suggest similarities with adult human bonds.</b> Animal Cognition 25, 137–148 (2022). Open access. <a href="https://doi.org/10.1007/s10071-021-01545-w" target="_blank" rel="noopener noreferrer">Read the paper →</a></p></div>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/do-male-and-female-dogs-bond-differently" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#can-dogs-learn-toy-names-by-overhearing"><span>下一篇 · 文献科普</span><b lang="en">Can Dogs Learn Toy Names Just by Listening to Us Talk?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
 <!-- ============ can-dogs-learn-toy-names-by-overhearing ============ -->
@@ -464,9 +810,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <div class="ph"><img src="images/dog-listening.jpg" alt="A golden retriever lying down with its head on the floor, looking up and to the side"></div>
     <div class="shade"></div>
     <div class="cap">
-      <div class="k">文献科普 · English</div>
+      <div class="k">文献科普 · 英文</div>
       <h1 lang="en">Can Dogs Learn Toy Names Just by Listening to Us Talk?</h1>
-      <div class="by">林怡馨 · 18 August 2026 · 7 min read</div>
+      <div class="by">林怡馨 · 7 min read</div>
     </div>
   </div>
   <div class="col a-body">
@@ -474,38 +820,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;justify
     <article class="prose en" lang="en">
 <div class="key">Some dogs can—but this ability appears to be extremely rare. In a 2026 study, ten Gifted Word Learner dogs learned the names of new toys by watching their owners speak to another family member. They performed about as well as when the owners spoke directly to them. Ten typical family dogs, however, showed no convincing evidence that they had learned which name belonged to which toy.</div><p class="lead">You are showing a new toy to someone in your home. You hold it up, say its name and pass it back and forth. Your dog is nearby, watching, but nobody speaks to the dog.</p><p>Could your dog still learn the toy’s name?</p><p>For most dogs, the answer is probably no. But a small group of dogs with an exceptional ability to learn object names may be listening more closely than anyone realised.</p><p>A study published in <i>Science</i> found that these unusually talented dogs could connect a new spoken label with the correct toy simply by observing an interaction between two people. They could even form that connection when the toy was no longer visible as its name was spoken.</p><h2>What are Gifted Word Learner dogs?</h2><p>Most dogs can learn action cues such as “sit” or “down.” Learning the names of individual objects is much less common.</p><p>Gifted Word Learner dogs are a rare group that already know the spoken labels of many objects, usually toys. They can spontaneously learn new toy names during natural play with their owners, without the kind of deliberate training normally used to teach commands.</p><p>In this research, the word <i>word</i> has a narrow meaning. It refers to an auditory label connected to a particular object. The study did not test whether dogs understand grammar, sentences or human language in the broader sense.</p><p>The researchers wanted to know whether the dogs’ unusual learning ability would still work when the human speech was not directed at them.</p><h2>How did researchers test whether dogs learn by overhearing?</h2><p>The study included several related experiments. Ten Gifted Word Learner dogs took part in both a direct-learning condition and an overhearing condition. Ten typical family Border collies were also tested in the overhearing condition. A further experiment with eight of the gifted dogs tested whether they could connect a name with a toy that was no longer in view.</p><table class="tbl"><thead><tr><th scope="col">Study detail</th><th scope="col">What the researchers did</th></tr></thead><tbody><tr><th scope="row">Gifted dogs</th><td>10 dogs with an existing vocabulary of object labels</td></tr><tr><th scope="row">Typical dogs</th><td>10 family Border collies without a known object-label vocabulary</td></tr><tr><th scope="row">New objects</th><td>Two unfamiliar toys in each experiment</td></tr><tr><th scope="row">Exposure</th><td>Eight minutes of labeling per toy, spread across four nonconsecutive days</td></tr><tr><th scope="row">Learning test</th><td>The owner asked the dog to retrieve each new toy by name</td></tr><tr><th scope="row">Memory test</th><td>Eight gifted dogs were tested again two weeks later</td></tr></tbody></table><p>Every dog was introduced to two unfamiliar toys with two new names. Each exposure began with one minute of labeling. This was followed by three minutes of play in which the owner did not say the toy’s name, and then by a period when the dog could explore the toy freely. In total, each dog heard each new label for eight minutes over four separate days.</p><p>In the direct condition, the owner played with the gifted dog and introduced the toy in the usual way. In the overhearing condition, the owner and another family member sat opposite each other, passed the toy back and forth and used simple phrases such as “This is [toy name]” and “Do you want [toy name]?” They looked at each other and the toy and spoke with enthusiasm, but they did not look at or communicate with the dog during the labeling period.</p><figure class="fig"><img src="images/two-people-talking.jpg" alt="Two people sitting across a table from each other, talking" loading="lazy"/><figcaption>The overhearing condition, from the dog’s side of the room: two people, a toy, and a conversation that does not include her.</figcaption></figure><p>After the exposure days, the two new toys were placed in another room with nine familiar toys. The owner remained out of sight and asked the dog to retrieve a toy by name. Because both new toys were always available, choosing the correct one showed whether the dog had connected each label with its intended object rather than simply choosing something unfamiliar.</p><h2>Can gifted dogs learn toy names by overhearing people?</h2><p>Yes. As a group, the ten Gifted Word Learner dogs selected the correct new toys significantly more often than expected by chance in both conditions.</p><p>Their median accuracy was 92% when their owners addressed them directly and 83% when they merely overheard the owners interacting with another family member. The difference between the two conditions was not statistically significant. Seven of the ten dogs performed above chance individually in each condition.</p><p>The researchers also examined only the first request for each new toy. The gifted dogs chose correctly in 16 of 20 first attempts after direct learning and in all 20 first attempts after overhearing. This helped rule out the possibility that the dogs only worked out the correct names through repeated testing.</p><p>The result suggests that some exceptionally gifted dogs can learn an object’s name even when they are observers rather than active participants in the interaction.</p><h2>Did typical family dogs learn the names too?</h2><p>No convincing evidence showed that they did.</p><p>The researchers tested ten typical family Border collies using the same overhearing procedure. At first glance, six dogs appeared to choose the correct toy more often than expected if they were selecting randomly from all 11 toys in the room.</p><p>However, when these dogs made mistakes, they usually selected the other new toy rather than one of the nine familiar toys. This pattern suggests that they recognised which toys were new but had not necessarily learned which name belonged to which one.</p><figure class="fig"><img src="images/dog-with-toys.jpg" alt="A dog lying on a wooden floor surrounded by scattered toys and a red frisbee" loading="lazy"/><figcaption>Nine familiar toys and two new ones. Having a second new toy in the room is what separates learning a name from preferring whatever is unfamiliar.</figcaption></figure><p>When the researchers used the more conservative comparison of choosing between the two new toys, none of the typical dogs performed above chance individually. Their behaviour was therefore more consistent with a preference for novelty than with learning two new object-name connections.</p><p>This distinction matters. A dog may hear an unfamiliar name and infer that it probably refers to an unfamiliar toy. That does not mean the dog has stored a lasting connection between that exact name and that exact object.</p><h2>Can gifted dogs learn a name when the toy is out of sight?</h2><p>The researchers next tested eight Gifted Word Learner dogs under a more difficult condition.</p><p>The owner first showed the dog a new toy and then placed it inside a specially designed bucket. Once the toy was hidden, the owner spoke its name while looking between the bucket and the dog. False-bottom buckets were used to control for possible scent cues.</p><p>The dogs later retrieved the correct new toys with a median accuracy of 79%, which was above chance at the group level. Five of the eight dogs also succeeded above chance individually.</p><p>This result suggests that the gifted dogs did not always need to see the object at the exact moment its name was spoken. They could connect information separated in time: the toy they had just seen and the label they heard after it disappeared.</p><p>Two weeks later, the eight dogs were tested again. Their performance had not significantly declined, suggesting that the new object-name connections had been retained rather than disappearing immediately after the first test.</p><h2>Are these dogs learning words like 18-month-old children?</h2><p>Only in a specific, limited sense.</p><p>Children as young as 18 months can learn a new object name by observing two other people interact, even when the conversation is not directed at them. The gifted dogs in this study completed a functionally similar task: they followed a human interaction and connected an overheard label with an object.</p><p>That does not mean the dogs have the language abilities of an 18-month-old child. The study tested one narrow skill—learning labels for objects. It did not test grammar, conversation, symbolic thought or the full range of abilities involved in human language.</p><p>The researchers also do not claim that dogs and children use identical mental processes. The dogs may have relied on a combination of gaze, enthusiasm, the people’s attention, the novelty of the toy and their previous experience of learning toy names. Future studies will be needed to separate these possibilities.</p><p>The comparison with children is useful because it shows that some of the social and cognitive building blocks used in early word learning are not necessarily unique to humans. It is not an intelligence-age comparison between dogs and toddlers.</p><h2>Can you teach your own dog toy names by talking nearby?</h2><p>This study does not show that overhearing is an effective teaching method for most dogs. The successful dogs had been selected because they already possessed an unusually large vocabulary of object labels. The typical Border collies did not show clear evidence of learning the new object-name mappings under the same conditions.</p><p>The overhearing interaction was also carefully structured. The two people repeatedly used the new label in short sentences, passed the toy between them, looked at the object and each other, and expressed enthusiasm. This was different from a dog casually hearing an ordinary household conversation in the background.</p><p>If your dog does not learn the names of toys, that says very little about the dog’s overall intelligence. Object-label learning is a specialised ability, while dogs can be skilled in many other areas, including reading gestures, learning routines, following action cues and responding to human emotions.</p><figure class="fig"><img src="images/dog-dozing.jpg" alt="A husky asleep on its side on a hard floor indoors" loading="lazy"/><figcaption>A dog lying quietly across the room may not be part of the conversation.</figcaption></figure><p>For dog owners, the most interesting lesson is not that every dog is secretly building a vocabulary. It is that a few dogs may learn simply by paying attention to interactions that do not include them. A dog lying quietly across the room may not be part of the conversation—but sometimes, it may still be learning from it.</p><div class="src"><p class="lbl">The study</p><p>Dror, S., Miklósi, Á., Morvai, B., Năstase, A.-S. &amp; Fugazza, C. <b>Dogs with a large vocabulary of object labels learn new labels by overhearing like 1.5-year-old infants.</b> Science 391, 160–163 (2026). <a href="https://doi.org/10.1126/science.adq5474" target="_blank" rel="noopener noreferrer">Read the paper →</a></p></div>
     </article>
-    <div class="origin">原载于 <a href="https://www.emotag.se/blog/can-dogs-learn-toy-names-by-overhearing" target="_blank" rel="noopener">Emotag 博客</a></div>
     <a class="next" href="#do-anxious-owners-have-anxious-dogs"><span>下一篇 · 文献科普</span><b lang="en">Do Anxious Owners Have Anxious Dogs?</b></a>
     <div class="a-foot"><a href="#home">返回首页</a><span>文 / 林怡馨</span></div>
   </div>
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><span>邮箱 <span class="todo">待补充</span></span></footer>
+  <footer><span>© 2026 Yixin Lin 林怡馨</span><span><a href="mailto:linyixin1903@outlook.com">linyixin1903@outlook.com</a></span></footer>
 </main>
 
-<!-- ============ ABOUT ============ -->
-<main class="view" data-view="about">
-  <div class="hero">
-    <div class="ph" data-label="个人照片"></div>
-    <div class="cap">
-      <div class="k">关于</div>
-      <h1>林怡馨 Yixin Lin</h1>
-      <div class="by">瑞典 马尔默 / 隆德</div>
-    </div>
-  </div>
-
-  <div class="a-body">
-    <div class="cv"><h4>简介</h4><div class="c"><span class="todo">一段自我介绍，待你补充</span></div></div>
-    <div class="cv"><h4>教育</h4><div class="c">
-      <div class="row"><small>2026</small><span>隆德大学　药物技术 硕士</span></div>
-      <div class="row"><small>2024</small><span>沈阳药科大学　药物分析 学士</span></div>
-    </div></div>
-    <div class="cv"><h4>专业</h4><div class="c">六年药学学习，方向为药物分析，有 HPLC 和 GC-MS 实际操作经验。</div></div>
-    <div class="cv"><h4>写作</h4><div class="c">在 Emotag 博客撰写英文文献科普：阅读研究论文，再写成面向大众的文章。<br>运营小红书账号「小林果学瑞典语」，约 2,000 名关注者。<br><span class="todo">其他经历待补充</span></div></div>
-    <div class="cv"><h4>技能</h4><div class="c tags"><span>HPLC</span><span>GC-MS</span><span>药物分析</span><span class="todo">其他技能待补充</span></div></div>
-    <div class="cv"><h4>联系</h4><div class="c">邮箱 <span class="todo">待补充</span><br>LinkedIn <span class="todo">待补充</span><br><br><a class="boxbtn" href="#about">下载简历</a></div></div>
-  </div>
-
-  <footer><span>© 2026 Yixin Lin 林怡馨</span><a href="#home">返回首页</a></footer>
-</main>
 
 </div>
 <script>
